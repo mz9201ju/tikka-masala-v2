@@ -1,0 +1,54 @@
+/* ✅ LOGO TOP CENTER */
+.home-logo-wrap {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.catering-logo {
+    width: 180px;
+    max-width: 70%;
+}
+
+/* ✅ MIDDLE DELIVERY ROW */
+.home-delivery-center {
+    position: absolute;
+    top: 75%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    transform: translateY(-50%);
+}
+
+/* ✅ DELIVERY BUTTON BASE */
+.delivery-pill {
+    padding: 12px 22px;
+    border-radius: 999px;
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 14px;
+    border: 2px solid #000;
+    transition: all 0.25s ease;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* ✅ BRAND COLORS */
+.delivery-pill.uber {
+    background: #000;
+    color: #fff;
+}
+
+.delivery-pill.doordash {
+    background: #ff3008;
+    color: #fff;
+}
+
+.delivery-pill.grubhub {
+    background: #f63440;
+    color: #fff;
+}
+
+.delivery-pill:hover {
+    transform: translateY(-2px) scale(1.04);
+}

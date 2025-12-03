@@ -1,0 +1,376 @@
+/* =========================
+   ✅ GLOBAL RESET
+========================= */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+/* =========================
+   ✅ FULL PAGE BACKGROUND
+========================= */
+body {
+  background: url("/src/assets/tikka-bg.jpg") no-repeat center center fixed;
+  background-size: 100% 100%;
+  min-height: 100vh;
+}
+
+/* =========================
+   ✅ NAVBAR (NO BLUR, NO BG)
+========================= */
+.nav {
+  padding: 20px 32px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ✅ Brand Visibility */
+.brand {
+  color: #0b1f2a;
+  font-weight: 900;
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+
+/* ✅ Button Now Visible */
+/* ✅ DESKTOP (default) */
+.links button {
+  background: #d4af37;
+  border: 2px solid #000;
+  color: #000;
+  padding: 10px 22px;
+  /* desktop spacing */
+  border-radius: 999px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* ✅ MOBILE OVERRIDE */
+@media (max-width: 768px) {
+  .links button {
+    padding: 10px 9px;
+    /* mobile tight spacing */
+  }
+}
+
+
+.links button:hover {
+  background: #000;
+  color: #d4af37;
+}
+
+.tm-social-row {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 14px;
+}
+
+/* ✅ MASTER ICON STYLE */
+.tm-social-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #d4af37;
+  background: rgba(0, 0, 0, 0.65);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: all 0.25s ease;
+}
+
+/* ✅ HOVER = CLEAN PREMIUM FEEL */
+.tm-social-icon:hover {
+  transform: translateY(-2px);
+  background: #000;
+  border-color: #d4af37;
+  box-shadow: 0 8px 22px rgba(212, 175, 55, 0.25);
+}
+
+/* ✅ BRAND-SPECIFIC COLORS (PROFESSIONAL EDITION) */
+
+.tm-social-icon.ig {
+  color: #e1306c;
+  /* Instagram */
+  border-color: rgba(225, 48, 108, 0.45);
+}
+
+.tm-social-icon.fb {
+  color: #1877f2;
+  /* Facebook */
+  border-color: rgba(24, 119, 242, 0.45);
+}
+
+.tm-social-icon.wa {
+  color: #25d366;
+  /* WhatsApp */
+  border-color: rgba(37, 211, 102, 0.45);
+}
+
+.tm-social-icon.phone {
+  color: #4fc3f7;
+  /* Phone (Clean Tech Blue) */
+  border-color: rgba(79, 195, 247, 0.45);
+}
+
+.tm-social-icon.map {
+  color: #ff5252;
+  /* Location (Refined Red) */
+  border-color: rgba(255, 82, 82, 0.45);
+}
+
+/* ✅ HOVER = INTENSIFIED BRAND GLOW (STILL CLEAN) */
+.tm-social-icon.ig:hover {
+  box-shadow: 0 8px 22px rgba(225, 48, 108, 0.35);
+}
+
+.tm-social-icon.fb:hover {
+  box-shadow: 0 8px 22px rgba(24, 119, 242, 0.35);
+}
+
+.tm-social-icon.wa:hover {
+  box-shadow: 0 8px 22px rgba(37, 211, 102, 0.35);
+}
+
+.tm-social-icon.phone:hover {
+  box-shadow: 0 8px 22px rgba(79, 195, 247, 0.35);
+}
+
+.tm-social-icon.map:hover {
+  box-shadow: 0 8px 22px rgba(255, 82, 82, 0.35);
+}
+
+
+/* =========================
+   ✅ HOME SECTION ALIGNMENT
+========================= */
+.home {
+  min-height: 72vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
+  text-align: center;
+}
+
+/* =========================
+   ✅ CONTENT OVERLAY (NO BLUR)
+========================= */
+.overlay {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 50px;
+  border-radius: 22px;
+  text-align: center;
+  border: 3px solid #0b1f2a;
+}
+
+.overlay h2 {
+  color: #0b1f2a;
+  font-size: 44px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.overlay p {
+  color: #111;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* =========================
+   ✅ FOOTER (NO BG, NO BLUR)
+========================= */
+.footer {
+  width: 100%;
+  text-align: center;
+  margin-top: 35px;
+  /* ✅ Desktop spacing */
+  padding-top: 32px;
+}
+
+/* =========================
+   ✅ FOOTER — MOBILE OVERRIDE
+========================= */
+@media (max-width: 768px) {
+  .footer {
+    margin-top: 20px;
+    /* ✅ Mobile spacing */
+  }
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ✅ Footer Text Fully Readable */
+.footer-item {
+  color: #0b1f2a;
+  font-size: 16px;
+  margin: 10px 0;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+/* ✅ Footer Links */
+.footer-link {
+  color: #000;
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+.footer-link:hover {
+  color: #d4af37;
+}
+
+/* ✅ Address specific icon styling */
+.footer-link-address i {
+  color: #c62828;
+  /* rich map-red */
+  font-size: 17px;
+}
+
+/* ✅ Hover effect stays consistent */
+.footer-link-address:hover i {
+  color: #d4af37;
+}
+
+/* =========================
+   ✅ BASE BUTTON (ALL VARIANTS)
+========================= */
+.tm-btn {
+  border: none;
+  border-radius: 999px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.22s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: inherit;
+  letter-spacing: 0.3px;
+  margin: 1px;
+}
+
+/* =========================
+   ✅ SMALL BUTTON (MENU ITEM ADD)
+========================= */
+.tm-btn-sm {
+  height: 38px;
+  padding: 0 18px;
+  font-size: 13px;
+  background: #000;
+  color: #d4af37;
+  border: 2px solid #d4af37;
+}
+
+.tm-btn-sm:hover {
+  background: #d4af37;
+  color: #000;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   ✅ PRIMARY FULL BUTTON (CHECKOUT)
+========================= */
+.tm-btn-primary {
+  background: #000;
+  color: #d4af37;
+  border: 2px solid #d4af37;
+}
+
+.tm-btn-primary:hover {
+  background: #d4af37;
+  color: #000;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   ✅ GHOST FULL BUTTON (CLEAR CART)
+========================= */
+.tm-btn-ghost {
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+}
+
+.tm-btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #d4af37;
+  color: #d4af37;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   ✅ FULL WIDTH VARIANT
+========================= */
+.tm-btn-full {
+  width: 100%;
+  height: 46px;
+  font-size: 15px;
+}
+
+
+.catering-logo {
+  width: 140px;
+  margin: 0 auto 20px;
+  display: block;
+  position: relative;
+  z-index: 2;
+
+  /* 🔄 Rotation Magic */
+  animation: logoSpin 14s linear infinite;
+  transform-origin: center;
+  will-change: transform;
+  top: 95px;
+}
+
+/* ✅ STRETCHED BACK LAYER (FAKE SHADOW LOGO) */
+.catering-logo::before {
+  content: "";
+  position: absolute;
+  inset: -40px;
+  background-image: url("../../assets/tikka-logo.jpg");
+  /* same image */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.25;
+
+  transform: scale(1.6);
+  filter: blur(6px);
+  z-index: -1;
+  border-radius: 50%;
+}
+
+/* ✅ Smooth Rotation */
+@keyframes logoSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

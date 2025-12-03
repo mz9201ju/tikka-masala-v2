@@ -1,0 +1,268 @@
+/* =========================
+   ✅ MENU PAGE BLEND FIX
+========================= */
+
+/* Main Menu Section */
+#menu.tm-section {
+    padding: 160px 6vw 80px;
+    min-height: 100vh;
+}
+
+/* Header */
+.tm-section-header {
+    max-width: 1400px;
+    margin: 0 auto 40px;
+    text-align: left;
+}
+
+.tm-section-header h2 {
+    font-size: 42px;
+    font-weight: 900;
+    color: #0b1f2a;
+    margin-bottom: 8px;
+}
+
+.tm-section-header p {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Layout Grid */
+.tm-menu-layout {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 380px;
+    gap: 48px;
+    align-items: start;
+}
+
+/* =========================
+   ✅ MENU LIST PANEL
+========================= */
+
+.tm-menu-list {
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 24px;
+    padding: 36px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+}
+
+.tm-menu-category {
+    margin-bottom: 42px;
+}
+
+.tm-menu-category-title {
+    font-size: 26px;
+    font-weight: 900;
+    color: #fbefef;
+    margin-bottom: 22px;
+    border-bottom: 3px solid #d4af37;
+    display: inline-block;
+    padding-bottom: 6px;
+}
+
+.tm-menu-items {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 22px;
+}
+
+/* Menu Item Card */
+.tm-menu-item {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 18px;
+    padding: 16px;
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.tm-menu-image {
+    width: 100%;
+    height: 92px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.tm-menu-item h4 {
+    font-size: 17px;
+    margin: 0 0 6px;
+    font-weight: 800;
+    color: #000;
+}
+
+.tm-menu-item p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Price + Button Column */
+.tm-menu-item-side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.tm-price {
+    font-weight: 900;
+    font-size: 16px;
+    color: #000;
+}
+
+/* =========================
+   ✅ CART PANEL
+========================= */
+
+.tm-cart {
+    background: rgba(10, 10, 10, 0.92);
+    color: white;
+    border-radius: 26px;
+    padding: 28px;
+
+    /* ✅ STAYS IN VIEW */
+    position: sticky;
+    top: 120px;
+
+    /* ✅ PREVENTS HEIGHT OVERFLOW BREAKAGE */
+    max-height: calc(100vh - 160px);
+    overflow-y: auto;
+
+    /* ✅ ENSURES IT STAYS ABOVE CONTENT */
+    z-index: 50;
+
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+}
+
+
+.tm-cart h3 {
+    font-size: 22px;
+    margin-bottom: 18px;
+    font-weight: 900;
+    color: #d4af37;
+}
+
+.tm-cart-empty {
+    opacity: 0.75;
+    font-size: 14px;
+}
+
+/* Cart Items */
+.tm-cart-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tm-cart-item {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.tm-cart-item-main {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.tm-cart-controls {
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tm-qty-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: none;
+    background: #d4af37;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.tm-qty {
+    min-width: 24px;
+    text-align: center;
+    font-weight: 900;
+}
+
+/* Cart Footer */
+.tm-cart-footer {
+    margin-top: 18px;
+}
+
+.tm-cart-total-row {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 900;
+    margin-bottom: 18px;
+    font-size: 16px;
+}
+
+/* =========================
+   ✅ DELIVERY BUTTONS
+========================= */
+
+.tm-delivery-buttons.vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tm-delivery-btn {
+    padding: 12px;
+    border-radius: 999px;
+    text-align: center;
+    font-weight: 900;
+    text-decoration: none;
+    color: white;
+}
+
+.tm-delivery-btn.uber {
+    background: #000;
+}
+
+.tm-delivery-btn.doordash {
+    background: #e60023;
+}
+
+.tm-delivery-btn.grubhub {
+    background: #ff8000;
+}
+
+/* =========================
+   ✅ FLOATING CART BUTTON
+========================= */
+
+button[style*="fixed"] {
+    background: #000 !important;
+    color: #d4af37 !important;
+    border: 2px solid #d4af37 !important;
+}
+
+/* =========================
+   ✅ MOBILE STACKING
+========================= */
+
+@media (max-width: 980px) {
+    .tm-menu-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .tm-cart {
+        position: relative;
+        top: 0;
+    }
+
+    #menu.tm-section {
+        padding: 130px 5vw 80px;
+    }
+}

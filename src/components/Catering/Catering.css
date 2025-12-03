@@ -1,0 +1,188 @@
+.catering-section {
+    min-height: 100vh;
+    padding: 60px 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.catering-container {
+    width: 100%;
+    max-width: 980px;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 32px 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
+.catering-logo {
+    width: 90px;
+    margin: 0 auto 12px;
+}
+
+.form-title {
+    color: #d4af37;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.form-subtitle {
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+/* ✅ EVENT INFO */
+.catering-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.catering-info label {
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.catering-info input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: #000;
+    color: #fff;
+}
+
+/* ✅ MENU GRID */
+.catering-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.catering-card {
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 14px;
+    padding: 16px;
+    background: linear-gradient(145deg, #0d0d0d, #000);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.catering-card h4 {
+    color: #d4af37;
+}
+
+.catering-card p {
+    color: #ccc;
+}
+
+.catering-card button {
+    background: #d4af37;
+    border: none;
+    color: #000;
+    padding: 8px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* ✅ CART */
+.catering-cart {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 20px;
+    padding-top: 20px;
+    color: white;
+    text-align: left;
+}
+
+.cart-row {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-counter {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.cart-counter button {
+    width: 26px;
+    height: 26px;
+    border: none;
+    border-radius: 6px;
+    background: #d4af37;
+    color: #000;
+    font-weight: 700;
+}
+
+.cart-total {
+    margin-top: 16px;
+    color: #d4af37;
+    font-size: 18px;
+}
+
+/* ✅ NOTES */
+.catering-notes {
+    margin-top: 24px;
+    width: 100%;
+    background: #000;
+    border-radius: 10px;
+    border: 1px solid #333;
+    color: white;
+    padding: 12px;
+}
+
+/* ✅ SUBMIT */
+.catering-submit {
+    margin-top: 24px;
+    width: 100%;
+    background: linear-gradient(135deg, #d4af37, #a8892e);
+    border: none;
+    padding: 14px;
+    border-radius: 12px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+/* ✅ MOBILE */
+@media (max-width: 640px) {
+    .catering-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ✅ FORCE NATIVE DATE PICKER ON MOBILE */
+.date-label input[type="date"] {
+    -webkit-appearance: textfield;
+    appearance: textfield;
+    pointer-events: auto;
+    position: relative;
+    z-index: 5;
+}
+
+/* ✅ Smooth native number scroller on mobile */
+.guest-label input[type="number"] {
+    -webkit-appearance: auto;
+    appearance: auto;
+    pointer-events: auto;
+    position: relative;
+    z-index: 5;
+    font-size: 16px;
+    /* ✅ prevents iOS zoom */
+    padding: 12px;
+}
+
+#catering.catering-section {
+    padding: 160px 6vw 80px;
+    min-height: 100vh;
+}
