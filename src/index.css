@@ -204,9 +204,8 @@ body {
 .footer {
   width: 100%;
   text-align: center;
-  margin-top: 35px;
   /* ✅ Desktop spacing */
-  padding-top: 32px;
+  padding-top: 600px;
 }
 
 /* =========================
@@ -214,7 +213,7 @@ body {
 ========================= */
 @media (max-width: 768px) {
   .footer {
-    margin-top: 20px;
+    margin-top: -101px;
     /* ✅ Mobile spacing */
   }
 }
