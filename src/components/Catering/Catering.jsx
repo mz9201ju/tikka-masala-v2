@@ -218,7 +218,7 @@ ${info.instructions || "None"}
                 />
 
                 {/* ✅ FINAL SUBMIT → WHATSAPP */}
-                <button className="catering-submit" onClick={handleSubmit}>
+                <button type="button" className="catering-submit" onClick={handleSubmit}>
                     ✅ Submit via WhatsApp
                 </button>
             </div>
