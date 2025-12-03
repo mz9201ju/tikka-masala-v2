@@ -122,7 +122,6 @@ ${info.instructions || "None"}
                         Number of Guests
                         <input
                             type="number"
-                            inputMode="numeric"
                             value={info.guests}
                             min="10"
                             max="500"
@@ -130,7 +129,6 @@ ${info.instructions || "None"}
                             onChange={(e) =>
                                 setInfo({ ...info, guests: Number(e.target.value) })
                             }
-                            onWheel={(e) => e.target.blur()}
                         />
                     </label>
                 </div>
