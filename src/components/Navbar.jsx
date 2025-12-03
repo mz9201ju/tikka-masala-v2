@@ -1,38 +1,39 @@
 import { Link, useLocation } from "react-router-dom";
-import { FaPhoneAlt, FaMapMarkerAlt, FaWhatsapp, FaInstagram, FaFacebookF } from "react-icons/fa";
+import {
+    FaPhoneAlt,
+    FaMapMarkerAlt,
+    FaWhatsapp,
+    FaInstagram,
+    FaFacebookF,
+} from "react-icons/fa";
 import { useEffect, useState } from "react";
 
 export default function Navbar() {
     const location = useLocation();
-    const [hidden, setHidden] = useState(false);
-    const [lastScrollY, setLastScrollY] = useState(0);
+    const [showNav, setShowNav] = useState(true);
 
     useEffect(() => {
         const handleScroll = () => {
-            const currentScrollY = window.scrollY;
-
-            if (currentScrollY > lastScrollY && currentScrollY > 80) {
-                // ✅ scrolling DOWN → hide navbar
-                setHidden(true);
+            // ✅ SHOW ONLY WHEN USER IS AT THE VERY TOP
+            if (window.scrollY <= 20) {
+                setShowNav(true);
             } else {
-                // ✅ scrolling UP → show navbar
-                setHidden(false);
+                setShowNav(false);
             }
-
-            setLastScrollY(currentScrollY);
         };
 
         window.addEventListener("scroll", handleScroll, { passive: true });
-
         return () => window.removeEventListener("scroll", handleScroll);
-    }, [lastScrollY]);
+    }, []);
 
     return (
         <nav
             className="nav"
             style={{
-                transform: hidden ? "translateY(-100%)" : "translateY(0)",
-                transition: "transform 0.35s ease",
+                transform: showNav ? "translateY(0)" : "translateY(-120%)",
+                transition: "transform 0.35s ease, opacity 0.25s ease",
+                opacity: showNav ? 1 : 0,
+                pointerEvents: showNav ? "auto" : "none",
             }}
         >
             <div className="nav-inner">
