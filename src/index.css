@@ -205,7 +205,8 @@ body {
   width: 100%;
   text-align: center;
   /* ✅ Desktop spacing */
-  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 1px;
 }
 
 /* =========================
