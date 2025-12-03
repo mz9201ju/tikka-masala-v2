@@ -347,23 +347,6 @@ body {
   top: 95px;
 }
 
-/* ✅ STRETCHED BACK LAYER (FAKE SHADOW LOGO) */
-.catering-logo::before {
-  content: "";
-  position: absolute;
-  inset: -40px;
-  background-image: url("../../assets/tikka-logo.jpg");
-  /* same image */
-  background-size: cover;
-  background-position: center;
-  opacity: 0.25;
-
-  transform: scale(1.6);
-  filter: blur(6px);
-  z-index: -1;
-  border-radius: 50%;
-}
-
 /* ✅ Smooth Rotation */
 @keyframes logoSpin {
   from {

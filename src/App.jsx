@@ -46,7 +46,7 @@ export default function App() {
   const handleCheckout = () => alert("Checkout coming soon");
 
   return (
-    <BrowserRouter basename="/tikka-masala-v2">
+    <BrowserRouter basename="/tikka-masala-v2/">
       <Navbar />
 
       <Routes>
