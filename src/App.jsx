@@ -6,6 +6,7 @@ import Home from "./components/Home/Home";
 import Footer from "./components/Footer";
 import MenuPage from "./components/Menu/MenuPage";
 import Catering from "./components/Catering/Catering";
+import ScrollToTop from "./components/ScrollToTop";
 
 import "./index.css";
 
@@ -47,6 +48,7 @@ export default function App() {
 
   return (
     <BrowserRouter basename="/tikka-masala-v2/">
+      <ScrollToTop />  {/* ✅ Global scroll reset */}
       <Navbar />
 
       <Routes>

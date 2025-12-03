@@ -118,19 +118,39 @@ ${info.instructions || "None"}
                         />
                     </label>
 
-                    <label>
-                        Number of Guests
-                        <input
-                            type="number"
-                            value={info.guests}
-                            min="10"
-                            max="500"
-                            step="1"
-                            onChange={(e) =>
-                                setInfo({ ...info, guests: Number(e.target.value) })
-                            }
-                        />
-                    </label>
+                    <div className="guest-center">
+                        <label className="guest-label">
+                            Number of Guests
+
+                            <div className="guest-scroller">
+                                <button
+                                    type="button"
+                                    onClick={() =>
+                                        setInfo({
+                                            ...info,
+                                            guests: Math.max(10, info.guests - 1),
+                                        })
+                                    }
+                                >
+                                    −
+                                </button>
+
+                                <span className="guest-value">{info.guests}</span>
+
+                                <button
+                                    type="button"
+                                    onClick={() =>
+                                        setInfo({
+                                            ...info,
+                                            guests: Math.min(500, info.guests + 1),
+                                        })
+                                    }
+                                >
+                                    +
+                                </button>
+                            </div>
+                        </label>
+                    </div>
                 </div>
 
                 {/* ✅ MENU GRID WITH IMAGES + LIVE QTY BUTTON */}
