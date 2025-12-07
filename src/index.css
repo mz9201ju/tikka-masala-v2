@@ -28,8 +28,6 @@ body {
     background-image: url("/src/assets/tikka-bg.jpg");
     background-repeat: repeat-x;
     background-position: center center;
-    background-attachment: scroll;
-    /* ✅ removes weird scaling on desktop */
     background-size: contain;
     /* ✅ preserves full mandala perfectly */
     background-color: #f7f2e8;
