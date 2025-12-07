@@ -14,24 +14,31 @@ body {
 }
 
 /* =========================
-   ✅ FULL PAGE BACKGROUND
+✅ GLOBAL FULL PAGE BACKGROUND (SAFE FOR ALL DEVICES)
 ========================= */
+
 body {
-  background: url("/src/assets/tikka-bg.jpg") no-repeat center center fixed;
+  margin: 0;
+  min-height: 100vh;
+  background-image: url("/src/assets/tikka-bg.jpg");
+  background-repeat: repeat-y;
+  background-position: top center;
   background-size: cover;
-  /* ✅ THIS stops distortion */
+  background-attachment: scroll;
+  /* ✅ REQUIRED for mobile */
 }
 
-/* ✅ DESKTOP FIX — prevent center distortion */
+/* =========================
+✅ DESKTOP ONLY OPTIMIZATION
+========================= */
 @media (min-width: 1024px) {
   body {
-    background-image: url("/src/assets/tikka-bg.jpg");
     background-repeat: repeat-x;
     background-position: center center;
     background-size: contain;
-    /* ✅ preserves full mandala perfectly */
+    background-attachment: fixed;
+    /* ✅ SAFE ONLY ON DESKTOP */
     background-color: #f7f2e8;
-    /* ✅ fallback behind edges */
   }
 }
 
