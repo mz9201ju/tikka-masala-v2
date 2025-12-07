@@ -133,37 +133,44 @@ export default function Catering() {
 
                     </label>
 
+                    {/* ✅ GUEST INFO */}
                     <div className="guest-center">
                         <label className="guest-label">
                             Number of Guests
+                            <input
+                                type="number"
+                                className="guest-wheel"
+                                value={info.guests}
+                                min={10}
+                                max={500}
+                                step={1}
+                                inputMode="numeric"
+                                pattern="[0-9]*"
+                                aria-label="Number of Guests"
 
-                            <div className="guest-scroller">
-                                <button
-                                    type="button"
-                                    onClick={() =>
-                                        setInfo({
-                                            ...info,
-                                            guests: Math.max(10, info.guests - 1),
-                                        })
-                                    }
-                                >
-                                    −
-                                </button>
+                                // ✅ Allow FREE typing on desktop (no forced reset)
+                                onChange={(e) => {
+                                    const raw = e.target.value;
 
-                                <span className="guest-value">{info.guests}</span>
+                                    setInfo({
+                                        ...info,
+                                        guests: raw === "" ? "" : Number(raw),
+                                    });
+                                }}
 
-                                <button
-                                    type="button"
-                                    onClick={() =>
-                                        setInfo({
-                                            ...info,
-                                            guests: Math.min(500, info.guests + 1),
-                                        })
-                                    }
-                                >
-                                    +
-                                </button>
-                            </div>
+                                // ✅ Clamp ONLY when user leaves the field
+                                onBlur={(e) => {
+                                    let value = Number(e.target.value);
+
+                                    if (isNaN(value) || value < 10) value = 10;
+                                    if (value > 500) value = 500;
+
+                                    setInfo({
+                                        ...info,
+                                        guests: value,
+                                    });
+                                }}
+                            />
                         </label>
                     </div>
                 </div>
