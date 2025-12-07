@@ -296,7 +296,7 @@ body {
 
 @media (max-width: 980px) {
   body {
-    background-attachment: scroll !important;  /* ✅ disables broken iOS fixed */
+    background-attachment: scroll;  /* ✅ disables broken iOS fixed */
     background-position: center top !important;
     background-size: cover !important;
   }
