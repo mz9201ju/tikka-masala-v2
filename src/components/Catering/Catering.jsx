@@ -142,7 +142,7 @@ export default function Catering() {
                                 className="guest-wheel"
                                 value={info.guests}
                                 min={10}
-                                max={500}
+                                max={1000}
                                 step={1}
                                 inputMode="numeric"
                                 pattern="[0-9]*"
@@ -163,7 +163,7 @@ export default function Catering() {
                                     let value = Number(e.target.value);
 
                                     if (isNaN(value) || value < 10) value = 10;
-                                    if (value > 500) value = 500;
+                                    if (value > 1000) value = 1000;
 
                                     setInfo({
                                         ...info,
