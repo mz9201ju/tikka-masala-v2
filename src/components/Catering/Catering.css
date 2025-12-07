@@ -1,42 +1,80 @@
-.catering-section {
+/* =========================
+   ✅ GLOBAL BACKGROUND (MATCHES HOME + MENU)
+========================= */
+
+body {
+    background: url("/src/assets/tikka-bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* ✅ Soft dark overlay for readability */
+#catering.catering-section::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.18),
+            rgba(0, 0, 0, 0.45));
+    z-index: 0;
+}
+
+/* =========================
+   ✅ MAIN SECTION
+========================= */
+
+#catering.catering-section {
+    position: relative;
+    z-index: 2;
     min-height: 100vh;
-    padding: 60px 16px;
+    padding: 160px 6vw 80px;
     display: flex;
     justify-content: center;
 }
 
+/* =========================
+   ✅ GLASS CONTAINER (MATCHES MENU)
+========================= */
+
 .catering-container {
     width: 100%;
     max-width: 980px;
-    background: rgba(0, 0, 0, 0.75);
-    padding: 32px 20px;
-    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.70);
+    backdrop-filter: blur(10px);
+    padding: 36px 24px;
+    border-radius: 24px;
     border: 1px solid rgba(212, 175, 55, 0.4);
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 40px 120px rgba(0, 0, 0, 0.65);
     text-align: center;
 }
 
+/* =========================
+   ✅ LOGO + HEADERS
+========================= */
+
 .catering-logo {
     width: 90px;
-    margin: 0 auto 12px;
+    margin: 0 auto 14px;
 }
 
 .form-title {
     color: #d4af37;
-    font-size: 28px;
-    font-weight: 800;
+    font-size: 30px;
+    font-weight: 900;
 }
 
 .form-subtitle {
-    color: #ccc;
+    color: rgba(255, 255, 255, 0.8);
     margin-bottom: 30px;
 }
 
-/* ✅ EVENT INFO */
+/* =========================
+   ✅ EVENT INFO GRID
+========================= */
+
 .catering-info {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 16px;
+    gap: 18px;
     margin-bottom: 28px;
 }
 
@@ -46,53 +84,64 @@
     display: flex;
     flex-direction: column;
     gap: 6px;
+    font-weight: 700;
 }
 
 .catering-info input {
-    padding: 10px;
-    border-radius: 8px;
+    padding: 12px;
+    border-radius: 10px;
     border: 1px solid #333;
     background: #000;
     color: #fff;
+    font-size: 15px;
 }
 
-/* ✅ MENU GRID */
+/* =========================
+   ✅ MENU GRID (CATERING ITEMS)
+========================= */
+
 .catering-menu {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 16px;
+    gap: 18px;
     margin-bottom: 30px;
 }
 
 .catering-card {
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    border-radius: 14px;
-    padding: 16px;
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    border-radius: 16px;
+    padding: 18px;
     background: linear-gradient(145deg, #0d0d0d, #000);
     display: flex;
     flex-direction: column;
     gap: 10px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
 }
 
 .catering-card h4 {
     color: #d4af37;
+    font-weight: 800;
 }
 
 .catering-card p {
     color: #ccc;
+    font-size: 14px;
 }
 
 .catering-card button {
     background: #d4af37;
     border: none;
     color: #000;
-    padding: 8px;
-    border-radius: 8px;
-    font-weight: 700;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 800;
     cursor: pointer;
 }
 
-/* ✅ CART */
+/* =========================
+   ✅ CART
+========================= */
+
 .catering-cart {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     margin-top: 20px;
@@ -122,76 +171,57 @@
     border-radius: 6px;
     background: #d4af37;
     color: #000;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .cart-total {
     margin-top: 16px;
     color: #d4af37;
     font-size: 18px;
+    font-weight: 900;
 }
 
-/* ✅ NOTES */
+/* =========================
+   ✅ NOTES
+========================= */
+
 .catering-notes {
     margin-top: 24px;
     width: 100%;
     background: #000;
-    border-radius: 10px;
+    border-radius: 12px;
     border: 1px solid #333;
     color: white;
     padding: 12px;
+    font-size: 15px;
 }
 
-/* ✅ SUBMIT */
+/* =========================
+   ✅ SUBMIT BUTTON
+========================= */
+
 .catering-submit {
-    margin-top: 24px;
+    margin-top: 26px;
     width: 100%;
     background: linear-gradient(135deg, #d4af37, #a8892e);
     border: none;
-    padding: 14px;
-    border-radius: 12px;
-    font-weight: 800;
-    cursor: pointer;
-}
-
-/* ✅ MOBILE */
-@media (max-width: 640px) {
-    .catering-info {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* ✅ FORCE NATIVE DATE PICKER ON MOBILE */
-.date-label input[type="date"] {
-    -webkit-appearance: textfield;
-    appearance: textfield;
-    pointer-events: auto;
-    position: relative;
-    z-index: 5;
-}
-
-/* ✅ Smooth native number scroller on mobile */
-.guest-label input[type="number"] {
-    -webkit-appearance: auto;
-    appearance: auto;
-    pointer-events: auto;
-    position: relative;
-    z-index: 5;
+    padding: 16px;
+    border-radius: 14px;
+    font-weight: 900;
     font-size: 16px;
-    /* ✅ prevents iOS zoom */
-    padding: 12px;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
 }
 
-#catering.catering-section {
-    padding: 160px 6vw 80px;
-    min-height: 100vh;
-}
+/* =========================
+   ✅ GUEST SCROLLER (UNCHANGED, BRAND MATCHED)
+========================= */
 
 .guest-label {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .guest-scroller {
@@ -215,23 +245,47 @@
     font-size: 20px;
     font-weight: 900;
     cursor: pointer;
-    transition: transform 0.15s ease;
-}
-
-.guest-scroller button:active {
-    transform: scale(0.9);
 }
 
 .guest-value {
     color: #fff;
     font-size: 16px;
-    font-weight: 800;
+    font-weight: 900;
     min-width: 36px;
     text-align: center;
 }
 
 .guest-center {
-  display: flex;
-  justify-content: center;
-  width: 100%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* =========================
+   ✅ FORCE NATIVE PICKERS
+========================= */
+
+.date-label input[type="date"],
+.guest-label input[type="number"] {
+    -webkit-appearance: auto;
+    appearance: auto;
+    pointer-events: auto;
+    position: relative;
+    z-index: 5;
+    font-size: 16px;
+    padding: 12px;
+}
+
+/* =========================
+   ✅ MOBILE STACKING
+========================= */
+
+@media (max-width: 640px) {
+    .catering-info {
+        grid-template-columns: 1fr;
+    }
+
+    #catering.catering-section {
+        padding: 140px 5vw 80px;
+    }
 }

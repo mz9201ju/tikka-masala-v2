@@ -1,14 +1,34 @@
 /* =========================
-   ✅ MENU PAGE BLEND FIX
+   ✅ GLOBAL BACKGROUND (MATCHES HOME)
 ========================= */
 
-/* Main Menu Section */
+body {
+    background: url("/src/assets/tikka-bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* ✅ Soft overlay for readability */
+#menu.tm-section::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.18),
+            rgba(0, 0, 0, 0.45));
+    z-index: 0;
+}
+
 #menu.tm-section {
+    position: relative;
+    z-index: 2;
     padding: 160px 6vw 80px;
     min-height: 100vh;
 }
 
-/* Header */
+/* =========================
+   ✅ HEADER
+========================= */
+
 .tm-section-header {
     max-width: 1400px;
     margin: 0 auto 40px;
@@ -18,17 +38,20 @@
 .tm-section-header h2 {
     font-size: 42px;
     font-weight: 900;
-    color: #0b1f2a;
+    color: #ffffff;
     margin-bottom: 8px;
 }
 
 .tm-section-header p {
     font-size: 16px;
     font-weight: 600;
-    color: #333;
+    color: rgba(255, 255, 255, 0.85);
 }
 
-/* Layout Grid */
+/* =========================
+   ✅ LAYOUT GRID
+========================= */
+
 .tm-menu-layout {
     max-width: 1400px;
     margin: 0 auto;
@@ -39,29 +62,54 @@
 }
 
 /* =========================
-   ✅ MENU LIST PANEL
+   ✅ MENU LIST PANEL (GLASS)
 ========================= */
 
 .tm-menu-list {
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.70);
+    backdrop-filter: blur(8px);
     border-radius: 24px;
     padding: 36px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.55);
 }
 
 .tm-menu-category {
-    margin-bottom: 42px;
+    margin-bottom: 26px;
 }
 
-.tm-menu-category-title {
-    font-size: 26px;
-    font-weight: 900;
-    color: #fbefef;
-    margin-bottom: 22px;
-    border-bottom: 3px solid #d4af37;
-    display: inline-block;
-    padding-bottom: 6px;
+/* =========================
+   ✅ COLLAPSIBLE CATEGORY BUTTON
+========================= */
+
+.tm-menu-category-toggle {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    color: #d4af37;
+    border: 2px solid #d4af37;
+    border-radius: 14px;
+    padding: 14px 18px;
+    font-weight: 800;
+    font-size: 18px;
+    text-align: left;
+    cursor: pointer;
+    margin-bottom: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.chevron {
+    transition: transform 0.25s ease;
+}
+
+.chevron.open {
+    transform: rotate(180deg);
+}
+
+/* =========================
+   ✅ MENU ITEMS GRID
+========================= */
 
 .tm-menu-items {
     display: grid;
@@ -69,15 +117,18 @@
     gap: 22px;
 }
 
-/* Menu Item Card */
+/* =========================
+   ✅ MENU ITEM CARD
+========================= */
+
 .tm-menu-item {
     display: grid;
     grid-template-columns: 110px 1fr;
     gap: 18px;
     padding: 16px;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.92);
     border-radius: 16px;
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 .tm-menu-image {
@@ -100,7 +151,10 @@
     margin-bottom: 10px;
 }
 
-/* Price + Button Column */
+/* =========================
+   ✅ PRICE + BUTTON
+========================= */
+
 .tm-menu-item-side {
     display: flex;
     flex-direction: column;
@@ -115,29 +169,23 @@
 }
 
 /* =========================
-   ✅ CART PANEL
+   ✅ CART PANEL (GLASS STICKY)
 ========================= */
 
 .tm-cart {
-    background: rgba(10, 10, 10, 0.92);
+    background: rgba(0, 0, 0, 0.78);
+    backdrop-filter: blur(10px);
     color: white;
     border-radius: 26px;
     padding: 28px;
-
-    /* ✅ STAYS IN VIEW */
     position: sticky;
     top: 120px;
-
-    /* ✅ PREVENTS HEIGHT OVERFLOW BREAKAGE */
     max-height: calc(100vh - 160px);
     overflow-y: auto;
-
-    /* ✅ ENSURES IT STAYS ABOVE CONTENT */
     z-index: 50;
-
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    box-shadow: 0 40px 120px rgba(0, 0, 0, 0.65);
 }
-
 
 .tm-cart h3 {
     font-size: 22px;
@@ -151,7 +199,10 @@
     font-size: 14px;
 }
 
-/* Cart Items */
+/* =========================
+   ✅ CART ITEMS
+========================= */
+
 .tm-cart-list {
     list-style: none;
     padding: 0;
@@ -193,7 +244,10 @@
     font-weight: 900;
 }
 
-/* Cart Footer */
+/* =========================
+   ✅ CART FOOTER
+========================= */
+
 .tm-cart-footer {
     margin-top: 18px;
 }
@@ -263,31 +317,6 @@ button[style*="fixed"] {
     }
 
     #menu.tm-section {
-        padding: 160px 6vw 80px;
+        padding: 140px 5vw 80px;
     }
-}
-
-.tm-menu-category-toggle {
-    width: 100%;
-    background: rgba(0, 0, 0, 0.85);
-    color: #d4af37;
-    border: 2px solid #d4af37;
-    border-radius: 14px;
-    padding: 14px 18px;
-    font-weight: 800;
-    font-size: 18px;
-    text-align: left;
-    cursor: pointer;
-    margin-bottom: 12px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.chevron {
-    transition: transform 0.25s ease;
-}
-
-.chevron.open {
-    transform: rotate(180deg);
 }
