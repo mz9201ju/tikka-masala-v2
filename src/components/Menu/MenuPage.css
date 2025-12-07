@@ -333,6 +333,8 @@ button[style*="fixed"] {
         background-position: top center;
         background-size: 600px auto;
         /* ✅ controls tile size */
+        background-attachment: scroll;
+        /* ✅ enables natural scrolling */
     }
 
     /* ✅ prevent overlay jitter on mobile */
