@@ -81,20 +81,20 @@ export default function Catering() {
             .join("\n");
 
         const message = `
-📢 *New Catering Request*
+                    📢 *New Catering Request*
 
-📅 *Event Date:* ${info.eventDate}
-👥 *Guests:* ${info.guests}
+                    📅 *Event Date:* ${info.eventDate}
+                    👥 *Guests:* ${info.guests}
 
-🧾 *Order Details:*
-${itemsText}
+                    🧾 *Order Details:*
+                    ${itemsText}
 
-💰 *Total:* $${total}
+                    💰 *Total:* $${total}
 
-📝 *Special Instructions:*
-${info.instructions || "None"}
+                    📝 *Special Instructions:*
+                    ${info.instructions || "None"}
 
-📍 Sent via Tikka Masala Website
+                    📍 Sent via Tikka Masala Website
     `.trim();
 
         const phone = "14255028100";
