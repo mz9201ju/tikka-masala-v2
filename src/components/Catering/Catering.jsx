@@ -24,6 +24,17 @@ export default function Catering() {
         instructions: "",
     });
 
+    const getTodayISO = () => {
+        const d = new Date();
+        const year = d.getFullYear();
+        const month = String(d.getMonth() + 1).padStart(2, "0");
+        const day = String(d.getDate()).padStart(2, "0");
+        return `${year}-${month}-${day}`;
+    };
+
+    const todayISO = getTodayISO();
+
+
     const addItem = (item) => {
         setCart((prev) => {
             const exists = prev.find((i) => i.id === item.id);
@@ -52,6 +63,11 @@ export default function Catering() {
     const handleSubmit = () => {
         if (!info.eventDate) {
             alert("Please select an event date.");
+            return;
+        }
+
+        if (info.eventDate < todayISO) {
+            alert("Past dates are not allowed. Please select today or a future date.");
             return;
         }
 
@@ -107,15 +123,14 @@ ${info.instructions || "None"}
                         <input
                             type="date"
                             value={info.eventDate}
-                            min={new Date().toISOString().split("T")[0]}
+                            min={todayISO}   // ✅ Blocks past dates in the calendar
                             required
                             onChange={(e) =>
                                 setInfo({ ...info, eventDate: e.target.value })
                             }
-                            onClick={(e) =>
-                                e.target.showPicker && e.target.showPicker()
-                            }
+                            onClick={(e) => e.target.showPicker && e.target.showPicker()}
                         />
+
                     </label>
 
                     <div className="guest-center">
