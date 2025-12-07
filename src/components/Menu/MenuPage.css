@@ -326,15 +326,18 @@ button[style*="fixed"] {
 ========================= */
 
 @media (max-width: 980px) {
-  body {
-    background-attachment: scroll !important;  /* ✅ disables broken iOS fixed */
-    background-position: center top !important;
-    background-size: cover !important;
-  }
+    body {
+        background-image: url("/src/assets/tikka-bg.jpg");
+        background-repeat: repeat;
+        /* ✅ allows tiling */
+        background-position: top center;
+        background-size: 600px auto;
+        /* ✅ controls tile size */
+    }
 
-  /* ✅ prevent overlay jitter on mobile */
-  #menu.tm-section::before,
-  #catering.catering-section::before {
-    position: absolute !important;
-  }
+    /* ✅ prevent overlay jitter on mobile */
+    #menu.tm-section::before,
+    #catering.catering-section::before {
+        position: absolute !important;
+    }
 }
