@@ -333,7 +333,7 @@ button[style*="fixed"] {
         background-position: top center;
         background-size: 600px auto;
         /* ✅ controls tile size */
-        background-attachment: scroll;
+        background-attachment: scroll !important;;
         /* ✅ enables natural scrolling */
     }
 
