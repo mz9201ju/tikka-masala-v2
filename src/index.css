@@ -18,8 +18,23 @@ body {
 ========================= */
 body {
   background: url("/src/assets/tikka-bg.jpg") no-repeat center center fixed;
-  background-size: 100% 100%;
-  min-height: 100vh;
+  background-size: cover;
+  /* ✅ THIS stops distortion */
+}
+
+/* ✅ DESKTOP FIX — prevent center distortion */
+@media (min-width: 1024px) {
+  body {
+    background-image: url("/src/assets/tikka-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    /* ✅ removes weird scaling on desktop */
+    background-size: contain;
+    /* ✅ preserves full mandala perfectly */
+    background-color: #f7f2e8;
+    /* ✅ fallback behind edges */
+  }
 }
 
 /* =========================
@@ -330,30 +345,4 @@ body {
   width: 100%;
   height: 46px;
   font-size: 15px;
-}
-
-
-.catering-logo {
-  width: 140px;
-  margin: 0 auto 20px;
-  display: block;
-  position: relative;
-  z-index: 2;
-
-  /* 🔄 Rotation Magic */
-  animation: logoSpin 14s linear infinite;
-  transform-origin: center;
-  will-change: transform;
-  top: 95px;
-}
-
-/* ✅ Smooth Rotation */
-@keyframes logoSpin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
 }

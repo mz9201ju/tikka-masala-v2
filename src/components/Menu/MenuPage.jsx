@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import "./MenuPage.css";
 
 export default function MenuPage({
@@ -12,6 +12,7 @@ export default function MenuPage({
   getItemQty,
 }) {
   const cartRef = useRef(null);
+  const [openCategory, setOpenCategory] = useState(null);
 
   // ✅ WHATSAPP CHECKOUT HANDLER (NO BACKEND NEEDED)
   const handleWhatsAppCheckout = () => {
@@ -53,51 +54,66 @@ ${itemsText}
       <div className="tm-menu-layout">
         {/* ================= MENU LIST ================= */}
         <div className="tm-menu-list">
-          {categories.map((cat) => (
-            <div key={cat} className="tm-menu-category">
-              <h3 className="tm-menu-category-title">{cat}</h3>
+          {categories.map((cat) => {
+            const isOpen = openCategory === cat;
 
-              <div className="tm-menu-items">
-                {MENU.filter((m) => m.category === cat).map((item) => (
-                  <article key={item.id} className="tm-menu-item">
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className="tm-menu-image"
-                    />
+            return (
+              <div key={cat} className="tm-menu-category">
 
-                    <div className="tm-menu-item-main">
-                      <div>
-                        <h4>{item.name}</h4>
-                        <p>{item.desc}</p>
+                {/* ✅ COLLAPSIBLE CATEGORY HEADER */}
+                <button
+                  className="tm-menu-category-toggle"
+                  onClick={() => setOpenCategory(isOpen ? null : cat)}
+                >
+                  <span>{cat}</span>
+                  <span className={`chevron ${isOpen ? "open" : ""}`}>▾</span>
+                </button>
 
-                        {item.tag && (
-                          <span className="tm-chip tm-chip-popular">
-                            {item.tag}
-                          </span>
-                        )}
-                      </div>
+                {/* ✅ COLLAPSIBLE MENU BODY */}
+                {isOpen && (
+                  <div className="tm-menu-items">
+                    {MENU.filter((m) => m.category === cat).map((item) => (
+                      <article key={item.id} className="tm-menu-item">
+                        <img
+                          src={item.image}
+                          alt={item.name}
+                          className="tm-menu-image"
+                        />
 
-                      <div className="tm-menu-item-side">
-                        <span className="tm-price">
-                          ${item.price.toFixed(2)}
-                        </span>
+                        <div className="tm-menu-item-main">
+                          <div>
+                            <h4>{item.name}</h4>
+                            <p>{item.desc}</p>
 
-                        <button
-                          className="tm-btn tm-btn-sm"
-                          onClick={() => addToCart(item)}
-                        >
-                          {getItemQty(item.id) > 0
-                            ? `Add (${getItemQty(item.id)})`
-                            : "Add to Cart"}
-                        </button>
-                      </div>
-                    </div>
-                  </article>
-                ))}
+                            {item.tag && (
+                              <span className="tm-chip tm-chip-popular">
+                                {item.tag}
+                              </span>
+                            )}
+                          </div>
+
+                          <div className="tm-menu-item-side">
+                            <span className="tm-price">
+                              ${item.price.toFixed(2)}
+                            </span>
+
+                            <button
+                              className="tm-btn tm-btn-sm"
+                              onClick={() => addToCart(item)}
+                            >
+                              {getItemQty(item.id) > 0
+                                ? `Add (${getItemQty(item.id)})`
+                                : "Add to Cart"}
+                            </button>
+                          </div>
+                        </div>
+                      </article>
+                    ))}
+                  </div>
+                )}
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* ================= CART ================= */}
@@ -153,7 +169,6 @@ ${itemsText}
                   </span>
                 </div>
 
-                {/* ✅ REAL WHATSAPP CHECKOUT */}
                 <button
                   className="tm-btn tm-btn-primary tm-btn-full"
                   onClick={handleWhatsAppCheckout}

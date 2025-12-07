@@ -5,8 +5,6 @@ export default function Home() {
   return (
     <>
       <section className="home">
-        {/* ✅ TOP CENTER LOGO */}
-        <img src={heroImg} alt="Logo" className="catering-logo" />
 
         {/* ✅ CENTER DELIVERY BUTTONS */}
         <div className="home-delivery-center">
