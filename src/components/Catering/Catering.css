@@ -295,15 +295,46 @@ body {
 ========================= */
 
 @media (max-width: 980px) {
-  body {
-    background-attachment: scroll;  /* ✅ disables broken iOS fixed */
-    background-position: center top !important;
-    background-size: cover !important;
-  }
+    body {
+        background-attachment: scroll;
+        /* ✅ disables broken iOS fixed */
+        background-position: center top !important;
+        background-size: cover !important;
+    }
 
-  /* ✅ prevent overlay jitter on mobile */
-  #menu.tm-section::before,
-  #catering.catering-section::before {
-    position: absolute !important;
-  }
+    /* ✅ prevent overlay jitter on mobile */
+    #menu.tm-section::before,
+    #catering.catering-section::before {
+        position: absolute !important;
+    }
+}
+
+/* =========================
+   ✅ MOBILE BACKGROUND ISOLATION FIX
+========================= */
+@media (max-width: 980px) {
+
+    /* ✅ Prevent body background from bleeding through cards */
+    .tm-menu-list,
+    .tm-menu-item,
+    .catering-container,
+    .catering-card {
+        background-clip: padding-box;
+        isolation: isolate;
+    }
+
+    /* ✅ Hard stop any overflow leaks */
+    .tm-menu-layout,
+    .tm-menu-list {
+        overflow: hidden;
+    }
+
+    /* ✅ Mobile background must NEVER move independently */
+    body::before {
+        position: fixed;
+        inset: 0;
+        background-size: cover;
+        background-position: center top;
+        transform: translateZ(0);
+    }
 }
