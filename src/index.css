@@ -26,7 +26,7 @@ body {
 @media (min-width: 1024px) {
   body {
     background-image: url("/src/assets/tikka-bg.jpg");
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
     background-position: center center;
     background-attachment: scroll;
     /* ✅ removes weird scaling on desktop */
