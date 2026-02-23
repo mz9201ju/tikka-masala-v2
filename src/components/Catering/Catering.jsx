@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Catering.css";
+import { PHONE_NUMBER } from "../../constants";
 
 // ✅ IMPORT ITEM IMAGES
 import biryaniImg from "../../assets/biryani.jpg";
@@ -24,15 +25,7 @@ export default function Catering() {
         instructions: "",
     });
 
-    const getTodayISO = () => {
-        const d = new Date();
-        const year = d.getFullYear();
-        const month = String(d.getMonth() + 1).padStart(2, "0");
-        const day = String(d.getDate()).padStart(2, "0");
-        return `${year}-${month}-${day}`;
-    };
-
-    const todayISO = getTodayISO();
+    const todayISO = new Date().toISOString().split("T")[0];
 
 
     const addItem = (item) => {
@@ -97,12 +90,11 @@ export default function Catering() {
                     📍 Sent via Tikka Masala Website
     `.trim();
 
-        const phone = "14255028100";
         const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
         const url = isMobile
-            ? `https://wa.me/${phone}?text=${encodeURIComponent(message)}`
-            : `https://web.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
+            ? `https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(message)}`
+            : `https://web.whatsapp.com/send?phone=${PHONE_NUMBER}&text=${encodeURIComponent(message)}`;
 
         window.open(url, "_blank", "noopener,noreferrer");
     };
