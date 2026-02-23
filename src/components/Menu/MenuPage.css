@@ -1,12 +1,3 @@
-/* =========================
-   ✅ GLOBAL BACKGROUND (MATCHES HOME)
-========================= */
-
-body {
-    background: url("/src/assets/tikka-bg.jpg") no-repeat center center fixed;
-    background-size: cover;
-}
-
 /* ✅ Soft overlay for readability */
 #menu.tm-section::before {
     content: "";
