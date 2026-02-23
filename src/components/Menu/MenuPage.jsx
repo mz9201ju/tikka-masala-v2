@@ -1,4 +1,5 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
+import { PHONE_NUMBER, DELIVERY_LINKS } from "../../constants";
 import "./MenuPage.css";
 
 export default function MenuPage({
@@ -13,19 +14,21 @@ export default function MenuPage({
 }) {
   const cartRef = useRef(null);
   const [openCategory, setOpenCategory] = useState(null);
+  const [isMobile, setIsMobile] = useState(() => window.innerWidth < 980);
 
-  // ✅ WHATSAPP CHECKOUT HANDLER (NO BACKEND NEEDED)
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 980);
+    window.addEventListener("resize", handleResize, { passive: true });
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const handleWhatsAppCheckout = () => {
     if (cart.length === 0) return;
-
-    const phone = "14255028100"; // ✅ Your WhatsApp number (keep without +)
 
     const itemsText = cart
       .map(
         (item) =>
-          `• ${item.name} x${item.qty} = $${(
-            item.price * item.qty
-          ).toFixed(2)}`
+          `• ${item.name} x${item.qty} = $${(item.price * item.qty).toFixed(2)}`
       )
       .join("%0A");
 
@@ -42,11 +45,10 @@ ${itemsText}
 ✅ Please confirm this order. Thank you!
 `;
 
-    const url = `https://wa.me/${phone}?text=${encodeURIComponent(
-      message
-    )}`;
-
-    window.open(url, "_blank");
+    window.open(
+      `https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(message)}`,
+      "_blank"
+    );
   };
 
   return (
@@ -183,10 +185,10 @@ ${itemsText}
                   Clear Cart
                 </button>
 
-                <div className="tm-cart-partners">
+                  <div className="tm-cart-partners">
                   <div className="tm-delivery-buttons vertical">
                     <a
-                      href="https://www.ubereats.com/store/tikka-masala/HL0YuQONTPaJQqFc9Ueiyw"
+                      href={DELIVERY_LINKS.ubereats}
                       className="tm-delivery-btn uber"
                       target="_blank"
                       rel="noreferrer"
@@ -195,7 +197,7 @@ ${itemsText}
                     </a>
 
                     <a
-                      href="https://www.doordash.com/store/tikkamasala-bellevue-2474911/2494193/"
+                      href={DELIVERY_LINKS.doordash}
                       className="tm-delivery-btn doordash"
                       target="_blank"
                       rel="noreferrer"
@@ -204,7 +206,7 @@ ${itemsText}
                     </a>
 
                     <a
-                      href="https://www.grubhub.com/restaurant/tikka-masala-1624-145th-place-southeast-bellevue/7492112"
+                      href={DELIVERY_LINKS.grubhub}
                       className="tm-delivery-btn grubhub"
                       target="_blank"
                       rel="noreferrer"
@@ -219,8 +221,7 @@ ${itemsText}
         </aside>
       </div>
 
-      {/* ✅ FLOATING CART BUTTON — MOBILE ONLY */}
-      {cart.length > 0 && window.innerWidth < 980 && (
+      {cart.length > 0 && isMobile && (
         <button
           onClick={() =>
             cartRef.current?.scrollIntoView({ behavior: "smooth" })

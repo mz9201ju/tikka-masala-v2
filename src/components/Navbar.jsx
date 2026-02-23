@@ -7,6 +7,11 @@ import {
     FaFacebookF,
 } from "react-icons/fa";
 import { useEffect, useState } from "react";
+import {
+    PHONE_NUMBER,
+    ADDRESS_MAPS_URL,
+    WHATSAPP_URL,
+} from "../constants";
 
 export default function Navbar() {
     const location = useLocation();
@@ -95,24 +100,22 @@ export default function Navbar() {
                 </a>
 
                 <a
-                    href="https://wa.me/14255028100"
+                    href={WHATSAPP_URL}
                     target="_blank"
                     rel="noreferrer"
                     className="tm-social-icon wa"
                 >
                     <FaWhatsapp />
                 </a>
-                {/* ✅ PHONE ICON */}
                 <a
-                    href="tel:+14255028100"
+                    href={`tel:+${PHONE_NUMBER}`}
                     className="tm-social-icon phone"
                 >
                     <FaPhoneAlt />
                 </a>
 
-                {/* ✅ ADDRESS / MAP ICON */}
                 <a
-                    href="https://maps.google.com/?q=1624+145th+PL+SE+Bellevue+WA+98007"
+                    href={ADDRESS_MAPS_URL}
                     target="_blank"
                     rel="noreferrer"
                     className="tm-social-icon map"

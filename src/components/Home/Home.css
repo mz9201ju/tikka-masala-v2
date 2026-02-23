@@ -12,13 +12,12 @@
 
 /* ✅ MIDDLE DELIVERY ROW */
 .home-delivery-center {
-    position: absolute;
-    top: 75%;
-    width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 18px;
-    transform: translateY(-50%);
+    flex-wrap: wrap;
+    padding: 0 16px;
 }
 
 /* ✅ DELIVERY BUTTON BASE */
