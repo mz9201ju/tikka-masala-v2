@@ -87,6 +87,32 @@ npm run dev      # Dev server at http://localhost:5173/tikka-masala-v2/
 
 ---
 
+## Windows Terminal & npm Usage
+
+- Always use `npm.cmd` for running npm commands in Windows environments to avoid PowerShell script blocking issues.
+- If you must use standard `npm` or other scripts, first run:
+  
+  powershell -ExecutionPolicy Bypass
+  
+  This will temporarily allow script execution for the session.
+
+---
+
+## Image Optimization (Windows)
+
+To optimize all images for fast website performance:
+
+1. Install sharp-cli globally:
+   npm.cmd install -g sharp-cli
+
+2. Run the following command in Command Prompt (not PowerShell):
+   sharp assets/*.jpg --resize 800 --quality 80 --output assets/optimized/
+
+- This resizes all JPGs to 800px width and compresses to 80% quality.
+- Use npm.cmd for any npm scripts, or run powershell -ExecutionPolicy Bypass before using standard npm in PowerShell.
+
+---
+
 ## Adding a New Page
 1. Create `src/components/YourPage/YourPage.jsx` and `YourPage.css`
 2. Add a `<Route path="/your-page" element={<YourPage />} />` in `App.jsx`

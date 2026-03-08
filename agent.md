@@ -129,3 +129,12 @@ npm run build     # Production build → dist/
 npm run lint      # ESLint check
 npm run preview   # Preview production build
 ```
+
+---
+
+## Windows Terminal Guidance
+
+- Always run npm commands as `npm.cmd` in Windows to avoid PowerShell script execution errors.
+- If running a normal npm command, execute:
+  powershell -ExecutionPolicy Bypass
+  before running the command to bypass script restrictions.

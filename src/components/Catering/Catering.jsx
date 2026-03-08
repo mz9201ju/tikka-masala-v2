@@ -3,18 +3,21 @@ import "./Catering.css";
 import { PHONE_NUMBER } from "../../constants";
 
 // ✅ IMPORT ITEM IMAGES
-import biryaniImg from "../../assets/biryani.jpg";
-import tikkaImg from "../../assets/tikka.jpg";
-import kababImg from "../../assets/kabab.jpg";
+import biryaniTray from "../../assets/Chicken-Biryani-Tray.jpg";
+import chickenTikkaTray from "../../assets/Chicken-Tikka-Tray.jpg";
+import seekhKababTray from "../../assets/Seekh-Kabab-Tray.jpg";
+import beefKarahiTray from "../../assets/Beef-Karahi-Tray.jpg";
+import naan20pcs from "../../assets/Naan-(20pcs).jpg";
+import raitaSaladCombo from "../../assets/Raita-&-Salad-Combo.jpg";
 
 // ✅ MENU WITH IMAGES
 const CATERING_MENU = [
-    { id: 1, name: "Chicken Biryani Tray", price: 65, image: biryaniImg },
-    { id: 2, name: "Beef Karahi Tray", price: 85, image: tikkaImg },
-    { id: 3, name: "Chicken Tikka Tray", price: 75, image: tikkaImg },
-    { id: 4, name: "Seekh Kabab Tray", price: 70, image: kababImg },
-    { id: 5, name: "Naan (20 pcs)", price: 25, image: tikkaImg },
-    { id: 6, name: "Raita & Salad Combo", price: 15, image: tikkaImg },
+    { id: 1, name: "Chicken Biryani Tray", price: 65, image: biryaniTray },
+    { id: 2, name: "Beef Karahi Tray", price: 85, image: beefKarahiTray },
+    { id: 3, name: "Chicken Tikka Tray", price: 75, image: chickenTikkaTray },
+    { id: 4, name: "Seekh Kabab Tray", price: 70, image: seekhKababTray },
+    { id: 5, name: "Naan (20 pcs)", price: 25, image: naan20pcs },
+    { id: 6, name: "Raita & Salad Combo", price: 15, image: raitaSaladCombo },
 ];
 
 export default function Catering() {

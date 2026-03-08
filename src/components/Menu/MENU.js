@@ -1,7 +1,31 @@
 // ✅ YOUR MENU DATA (MOVE IT HERE)
-import biryani from "../../assets/biryani.jpg";
-import kabab from "../../assets/kabab.jpg";
-import tikka from "../../assets/tikka.jpg";
+import AlooChole from '../../assets/Aloo-Chole.jpg';
+import AlooGobi from '../../assets/Aloo-Gobi.webp';
+import BainganBharta from '../../assets/Baingan-Bharta.webp';
+import ButterShrimp from '../../assets/Butter-Shrimp.webp';
+import ChiliChickenWings from '../../assets/Chili-Chicken-Wings.jpg';
+import CreamyCoconutShrimp from '../../assets/Creamy-Coconut-Shrimp.webp';
+import DaalMakhani from '../../assets/Daal-Makhani.webp';
+import GarlicBasilNaan from '../../assets/Garlic-&-Basil-Naan.jpg';
+import GulabJamun from '../../assets/Gulab-Jamun.webp';
+import HyderabadiBiryaniChicken from '../../assets/Hyderabadi-Biryani-(Chicken).webp';
+import HyderabadiBiryaniLamb from '../../assets/Hyderabadi-Biryani-(Lamb).jpg';
+import HyderabadiBiryaniVegetable from '../../assets/Hyderabadi-Biryani-(Vegetable).webp';
+import KeemaNaan from '../../assets/Keema-Naan.webp';
+import Kheer from '../../assets/Kheer.webp';
+import LentilSoup from '../../assets/Lentil-Soup.webp';
+import MangoChutney from '../../assets/Mango-Chutney.webp';
+import MangoIceCream from '../../assets/Mango-Ice-Cream.jpg';
+import MixedPickle from '../../assets/Mixed-Pickle.jpg';
+import Raita from '../../assets/Raita.jpg';
+import SaagPaneer from '../../assets/Saag-Paneer.jpg';
+import ShahiPaneer from '../../assets/Shahi-Paneer.jpg';
+import ShrimpJalfrazie from '../../assets/Shrimp-Jalfrazie.webp';
+import ShrimpSaag from '../../assets/Shrimp-Saag.webp';
+import ShrimpTikkaMasala from '../../assets/Shrimp-Tikka-Masala.webp';
+import VegetableSalad from '../../assets/Vegetable-Salad.jpg';
+import VegetableSamosa from '../../assets/Vegetable-Samosa.jpg';
+import VeggePakora from '../../assets/vegge-pakora.jpg';
 
 const MENU = [
 
@@ -14,7 +38,7 @@ const MENU = [
     desc: "Fresh vegetables battered and deep fried.",
     price: 4.99,
     category: "Appetizers",
-    image: kabab,
+    image: VeggePakora,
   },
   {
     id: 2,
@@ -22,7 +46,7 @@ const MENU = [
     desc: "Boneless chicken fritters served with mint chutney.",
     price: 5.99,
     category: "Appetizers",
-    image: tikka,
+    image: ShrimpTikkaMasala,
   },
   {
     id: 3,
@@ -30,7 +54,7 @@ const MENU = [
     desc: "Spicy yogurt-marinated wings fried crispy.",
     price: 9.50,
     category: "Appetizers",
-    image: tikka,
+    image: ChiliChickenWings,
   },
   {
     id: 4,
@@ -38,7 +62,7 @@ const MENU = [
     desc: "Triangle pastry stuffed with vegetables & potatoes.",
     price: 5.50,
     category: "Appetizers",
-    image: kabab,
+    image: VegetableSamosa,
   },
 
   // =====================
@@ -50,7 +74,7 @@ const MENU = [
     desc: "Traditional Indian salad with tomatoes & dressing.",
     price: 7.50,
     category: "Salads",
-    image: kabab,
+    image: VegetableSalad,
   },
   {
     id: 6,
@@ -58,7 +82,7 @@ const MENU = [
     desc: "Traditional Indian soup of lentils & spices.",
     price: 5.95,
     category: "Soup",
-    image: kabab,
+    image: LentilSoup,
   },
 
   // =====================
@@ -70,7 +94,7 @@ const MENU = [
     desc: "Yogurt dip with cucumbers & carrots.",
     price: 3.95,
     category: "Sides",
-    image: kabab,
+    image: Raita,
   },
   {
     id: 8,
@@ -78,7 +102,7 @@ const MENU = [
     desc: "Sweet mango Indian chutney.",
     price: 3.25,
     category: "Sides",
-    image: kabab,
+    image: MangoChutney,
   },
   {
     id: 9,
@@ -86,7 +110,7 @@ const MENU = [
     desc: "Traditional Indian mixed pickle.",
     price: 3.50,
     category: "Sides",
-    image: kabab,
+    image: MixedPickle,
   },
 
   // =====================
@@ -98,7 +122,7 @@ const MENU = [
     desc: "Fire-roasted mashed eggplant with spices.",
     price: 15.50,
     category: "Vegetarian",
-    image: kabab,
+    image: BainganBharta,
   },
   {
     id: 11,
@@ -106,7 +130,7 @@ const MENU = [
     desc: "Cauliflower & potatoes in house spices.",
     price: 14.99,
     category: "Vegetarian",
-    image: kabab,
+    image: AlooGobi,
   },
   {
     id: 12,
@@ -114,7 +138,7 @@ const MENU = [
     desc: "Paneer in creamy tomato sauce.",
     price: 14.99,
     category: "Vegetarian",
-    image: kabab,
+    image: ShahiPaneer,
   },
   {
     id: 13,
@@ -122,7 +146,7 @@ const MENU = [
     desc: "Chickpeas and potatoes Punjabi style.",
     price: 14.99,
     category: "Vegetarian",
-    image: kabab,
+    image: AlooChole,
   },
   {
     id: 14,
@@ -130,7 +154,7 @@ const MENU = [
     desc: "Slow cooked lentils in buttery masala.",
     price: 15.50,
     category: "Vegetarian",
-    image: kabab,
+    image: DaalMakhani,
   },
   {
     id: 15,
@@ -138,7 +162,7 @@ const MENU = [
     desc: "Spinach puree with homemade paneer.",
     price: 15.50,
     category: "Vegetarian",
-    image: kabab,
+    image: SaagPaneer,
   },
 
   // =====================
@@ -150,7 +174,7 @@ const MENU = [
     desc: "Shrimp cooked in rich masala sauce.",
     price: 18.99,
     category: "Seafood",
-    image: tikka,
+    image: ShrimpTikkaMasala,
   },
   {
     id: 17,
@@ -158,7 +182,7 @@ const MENU = [
     desc: "Shrimp in creamy butter tomato sauce.",
     price: 19.99,
     category: "Seafood",
-    image: tikka,
+    image: ButterShrimp,
   },
   {
     id: 18,
@@ -166,7 +190,7 @@ const MENU = [
     desc: "Shrimp simmered in coconut curry.",
     price: 18.99,
     category: "Seafood",
-    image: tikka,
+    image: CreamyCoconutShrimp,
   },
   {
     id: 19,
@@ -174,7 +198,7 @@ const MENU = [
     desc: "Shrimp cooked with spinach & Indian spices.",
     price: 18.99,
     category: "Seafood",
-    image: tikka,
+    image: ShrimpSaag,
   },
   {
     id: 20,
@@ -182,7 +206,7 @@ const MENU = [
     desc: "Shrimp sautéed with bell peppers & onions.",
     price: 18.99,
     category: "Seafood",
-    image: tikka,
+    image: ShrimpJalfrazie,
   },
 
   // =====================
@@ -194,7 +218,7 @@ const MENU = [
     desc: "Saffron rice with vegetables.",
     price: 16.99,
     category: "Rice",
-    image: biryani,
+    image: HyderabadiBiryaniVegetable,
   },
   {
     id: 22,
@@ -202,7 +226,7 @@ const MENU = [
     desc: "Classic chicken dum biryani.",
     price: 17.99,
     category: "Rice",
-    image: biryani,
+    image: HyderabadiBiryaniChicken,
   },
   {
     id: 23,
@@ -210,7 +234,7 @@ const MENU = [
     desc: "Traditional lamb biryani.",
     price: 18.99,
     category: "Rice",
-    image: biryani,
+    image: HyderabadiBiryaniLamb,
   },
   {
     id: 24,
@@ -218,7 +242,7 @@ const MENU = [
     desc: "Shrimp biryani with aromatic spices.",
     price: 18.99,
     category: "Rice",
-    image: biryani,
+    image: ShrimpTikkaMasala,
   },
 
   // =====================
@@ -230,7 +254,7 @@ const MENU = [
     desc: "Traditional white flour flatbread.",
     price: 2.99,
     category: "Bread",
-    image: kabab,
+    image: GarlicBasilNaan,
   },
   {
     id: 26,
@@ -238,7 +262,7 @@ const MENU = [
     desc: "Naan topped with diced onions.",
     price: 3.99,
     category: "Bread",
-    image: kabab,
+    image: GarlicBasilNaan,
   },
   {
     id: 27,
@@ -246,7 +270,7 @@ const MENU = [
     desc: "Fresh garlic and basil naan.",
     price: 3.99,
     category: "Bread",
-    image: kabab,
+    image: GarlicBasilNaan,
   },
   {
     id: 28,
@@ -254,7 +278,7 @@ const MENU = [
     desc: "Stuffed naan with spiced minced lamb.",
     price: 4.99,
     category: "Bread",
-    image: kabab,
+    image: KeemaNaan,
   },
 
   // =====================
@@ -266,7 +290,7 @@ const MENU = [
     desc: "Homemade mango ice cream with pistachio.",
     price: 4.95,
     category: "Desserts",
-    image: kabab,
+    image: MangoIceCream,
   },
   {
     id: 30,
@@ -274,7 +298,7 @@ const MENU = [
     desc: "Milk dumplings soaked in rose syrup.",
     price: 3.95,
     category: "Desserts",
-    image: kabab,
+    image: GulabJamun,
   },
   {
     id: 31,
@@ -282,7 +306,7 @@ const MENU = [
     desc: "Traditional rice pudding with cardamom.",
     price: 3.95,
     category: "Desserts",
-    image: kabab,
+    image: Kheer,
   },
 
 ];
