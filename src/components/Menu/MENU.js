@@ -26,6 +26,7 @@ import ShrimpTikkaMasala from '../../assets/Shrimp-Tikka-Masala.webp';
 import VegetableSalad from '../../assets/Vegetable-Salad.jpg';
 import VegetableSamosa from '../../assets/Vegetable-Samosa.jpg';
 import VeggePakora from '../../assets/vegge-pakora.jpg';
+import ChickenPakora from '../../assets/chicken-pakora.jpg';
 
 const MENU = [
 
@@ -46,7 +47,7 @@ const MENU = [
     desc: "Boneless chicken fritters served with mint chutney.",
     price: 5.99,
     category: "Appetizers",
-    image: ShrimpTikkaMasala,
+    image: ChickenPakora,
   },
   {
     id: 3,
