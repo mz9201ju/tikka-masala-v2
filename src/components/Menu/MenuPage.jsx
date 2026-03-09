@@ -231,7 +231,7 @@ ${itemsText}
                   Clear Cart
                 </button>
 
-                <div className="tm-cart-partners">
+                {/* <div className="tm-cart-partners">
                   <div className="tm-delivery-buttons vertical">
                     <a
                       href={DELIVERY_LINKS.ubereats}
@@ -260,7 +260,7 @@ ${itemsText}
                       Grubhub
                     </a>
                   </div>
-                </div>
+                </div> */}
               </div>
             </>
           )}
