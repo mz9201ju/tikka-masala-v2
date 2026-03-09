@@ -13,6 +13,7 @@ export default function MenuPage({
   getItemQty,
 }) {
   const cartRef = useRef(null);
+  const categoryRefs = useRef({});
   const [openCategory, setOpenCategory] = useState(null);
   const [isMobile, setIsMobile] = useState(() => window.innerWidth < 980);
 
@@ -51,6 +52,16 @@ ${itemsText}
     );
   };
 
+  const handleToggleCategory = (cat) => {
+    const isOpen = openCategory === cat;
+    setOpenCategory(isOpen ? null : cat);
+    if (!isOpen) {
+      setTimeout(() => {
+        categoryRefs.current[cat]?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 100); // slight delay to allow expansion
+    }
+  };
+
   return (
     <section id="menu" className="tm-section">
       <div className="tm-menu-layout">
@@ -60,12 +71,16 @@ ${itemsText}
             const isOpen = openCategory === cat;
 
             return (
-              <div key={cat} className="tm-menu-category">
+              <div
+                key={cat}
+                className="tm-menu-category"
+                ref={el => categoryRefs.current[cat] = el}
+              >
 
                 {/* ✅ COLLAPSIBLE CATEGORY HEADER */}
                 <button
                   className="tm-menu-category-toggle"
-                  onClick={() => setOpenCategory(isOpen ? null : cat)}
+                  onClick={() => handleToggleCategory(cat)}
                 >
                   <span>{cat}</span>
                   <span className={`chevron ${isOpen ? "open" : ""}`}>▾</span>
@@ -185,7 +200,7 @@ ${itemsText}
                   Clear Cart
                 </button>
 
-                  <div className="tm-cart-partners">
+                <div className="tm-cart-partners">
                   <div className="tm-delivery-buttons vertical">
                     <a
                       href={DELIVERY_LINKS.ubereats}
