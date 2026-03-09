@@ -6,11 +6,14 @@ import ButterShrimp from '../../assets/Butter-Shrimp.webp';
 import ChiliChickenWings from '../../assets/Chili-Chicken-Wings.jpg';
 import CreamyCoconutShrimp from '../../assets/Creamy-Coconut-Shrimp.webp';
 import DaalMakhani from '../../assets/Daal-Makhani.webp';
-import GarlicBasilNaan from '../../assets/Garlic-&-Basil-Naan.jpg';
+import Naan from '../../assets/Naan.jpg';
+import OnionKulchaRecipe from '../../assets/Onion-Kulcha-Recipe.jpg';
+import GarlicBasilNaan from '../../assets/Garlic-Basil-Naan.jpg';
 import GulabJamun from '../../assets/Gulab-Jamun.webp';
 import HyderabadiBiryaniChicken from '../../assets/Hyderabadi-Biryani-(Chicken).webp';
 import HyderabadiBiryaniLamb from '../../assets/Hyderabadi-Biryani-(Lamb).jpg';
 import HyderabadiBiryaniVegetable from '../../assets/Hyderabadi-Biryani-(Vegetable).webp';
+import HyderabadiShrimpBiryani from '../../assets/Hyderabadi-Shrimp-Biryani.jpg';
 import KeemaNaan from '../../assets/Keema-Naan.webp';
 import Kheer from '../../assets/Kheer.webp';
 import LentilSoup from '../../assets/Lentil-Soup.webp';
@@ -243,7 +246,7 @@ const MENU = [
     desc: "Shrimp biryani with aromatic spices.",
     price: 18.99,
     category: "Rice",
-    image: ShrimpTikkaMasala,
+    image: HyderabadiShrimpBiryani,
   },
 
   // =====================
@@ -255,7 +258,7 @@ const MENU = [
     desc: "Traditional white flour flatbread.",
     price: 2.99,
     category: "Bread",
-    image: GarlicBasilNaan,
+    image: Naan,
   },
   {
     id: 26,
@@ -263,7 +266,7 @@ const MENU = [
     desc: "Naan topped with diced onions.",
     price: 3.99,
     category: "Bread",
-    image: GarlicBasilNaan,
+    image: OnionKulchaRecipe,
   },
   {
     id: 27,
