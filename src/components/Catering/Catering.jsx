@@ -27,6 +27,7 @@ export default function Catering() {
         guests: 25,
         instructions: "",
     });
+    const [openImage, setOpenImage] = useState(null);
 
     const todayISO = new Date().toISOString().split("T")[0];
 
@@ -104,6 +105,12 @@ export default function Catering() {
 
     return (
         <section id="catering" className="catering-section">
+            {openImage && (
+                <div className="modal-overlay" onClick={() => setOpenImage(null)}>
+                    <img src={openImage} className="modal-img" alt="Preview" />
+                </div>
+            )}
+            
             <div className="catering-container">
 
                 <h2 className="form-title">Catering Orders</h2>
@@ -182,6 +189,7 @@ export default function Catering() {
                                     src={item.image}
                                     alt={item.name}
                                     className="catering-item-img"
+                                    onClick={() => setOpenImage(item.image)}
                                 />
 
                                 <h4>{item.name}</h4>
