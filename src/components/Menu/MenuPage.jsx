@@ -146,6 +146,12 @@ ${itemsText}
               <ul className="tm-cart-list">
                 {cart.map((item) => (
                   <li key={item.id} className="tm-cart-item">
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="tm-cart-item-img" // Add a CSS class for styling
+                      style={{ width: "48px", height: "48px", borderRadius: "8px", marginRight: "12px" }}
+                    />
                     <div className="tm-cart-item-main">
                       <strong>{item.name}</strong>
                       <span className="tm-cart-price">
