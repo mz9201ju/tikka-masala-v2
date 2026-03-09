@@ -16,6 +16,7 @@ export default function MenuPage({
   const categoryRefs = useRef({});
   const [openCategory, setOpenCategory] = useState(null);
   const [isMobile, setIsMobile] = useState(() => window.innerWidth < 980);
+  const [modalImage, setModalImage] = useState(null);
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 980);
@@ -64,6 +65,29 @@ ${itemsText}
 
   return (
     <section id="menu" className="tm-section">
+      {modalImage && (
+        <div
+          className="modal-overlay"
+          onClick={() => setModalImage(null)}
+          style={{
+            position: 'fixed',
+            top: 0, left: 0, right: 0, bottom: 0,
+            background: 'rgba(0,0,0,0.7)',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            zIndex: 1000
+          }}
+        >
+          <img
+            src={modalImage}
+            alt="Modal"
+            style={{ maxHeight: '80vh', maxWidth: '80vw', borderRadius: '8px' }}
+            onClick={e => e.stopPropagation()} // Prevent closing when clicking the image itself
+          />
+        </div>
+      )}
+      
       <div className="tm-menu-layout">
         {/* ================= MENU LIST ================= */}
         <div className="tm-menu-list">
@@ -95,6 +119,7 @@ ${itemsText}
                           src={item.image}
                           alt={item.name}
                           className="tm-menu-image"
+                          onClick={() => setModalImage(item.image)}
                         />
 
                         <div className="tm-menu-item-main">
