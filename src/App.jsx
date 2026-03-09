@@ -19,7 +19,7 @@ export default function App() {
     useCart();
 
   return (
-    <BrowserRouter basename="/tikka-masala-v2/">
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <ScrollToTop />
       <Navbar />
 
