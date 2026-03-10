@@ -30,6 +30,81 @@ import VegetableSalad from '../../assets/Vegetable-Salad.jpg';
 import VegetableSamosa from '../../assets/Vegetable-Samosa.jpg';
 import VeggePakora from '../../assets/vegge-pakora.jpg';
 import ChickenPakora from '../../assets/chicken-pakora.jpg';
+// Auto-generated imports for missing images
+import MixedAppetizerForTwo from '../../assets/Mixed-Appetizer-For-Two.jpg';
+import OnionBhaji from '../../assets/Onion-Bhaji.jpg';
+import ShrimpCocktail from '../../assets/Shrimp-Cocktail.jpg';
+import BukharaSalad from '../../assets/Bukhara-Salad.jpg';
+import PrawnSalad from '../../assets/Prawn-Salad.jpg';
+import ButterLamb from '../../assets/Butter-Lamb.jpg';
+import LambSaag from '../../assets/Lamb-Saag.jpg';
+import BukharaCurryLambRoghanJosh from '../../assets/Bukhara-Curry-Lamb-Roghan-Josh.jpg';
+import LambJalrraizie from '../../assets/Lamb-Jalrraizie.jpg';
+import LambTikkaMasala from '../../assets/Lamb-Tikka-Masala.jpg';
+import CreamyCoconutLambCurry from '../../assets/Creamy-Coconut-Lamb-Curry.jpg';
+import LambVindaloo from '../../assets/Lamb-Vindaloo.jpg';
+import LambKashmiri from '../../assets/Lamb-Kashmiri.jpg';
+import LambHaryalli from '../../assets/Lamb-Haryalli.jpg';
+import DhaniLamb from '../../assets/Dhani-Lamb.jpg';
+import LambTakatak from '../../assets/Lamb-Takatak.jpg';
+import LambShahjahani from '../../assets/Lamb-Shahjahani.jpg';
+import LambMaharani from '../../assets/Lamb-Maharani.jpg';
+import ChickenTikkaMasala from '../../assets/Chicken-Tikka-Masala.jpg';
+import CreamyCoconutChickenCurry from '../../assets/Creamy-Coconut-Chicken-Curry.jpg';
+import ButterChicken from '../../assets/Butter-Chicken.jpg';
+import ChickenSaag from '../../assets/Chicken-Saag.jpg';
+import ChickenVindaloo from '../../assets/Chicken-Vindaloo.jpg';
+import ChickenJalfraizie from '../../assets/Chicken-Jalfraizie.jpg';
+import SpecialChickenMumtaz from '../../assets/Special-Chicken-Mumtaz.jpg';
+import BukharaCurryChicken from '../../assets/Bukhara-Curry-Chicken.jpg';
+import ChickenRoghanJosh from '../../assets/Chicken-Roghan-Josh.jpg';
+import ChickenKashmiri from '../../assets/Chicken-Kashmiri.jpg';
+import ChickenHaryalli from '../../assets/Chicken-Haryalli.jpg';
+import ChickenShahjahani from '../../assets/Chicken-Shahjahani.jpg';
+import ChickenTakatak from '../../assets/Chicken-Takatak.jpg';
+import ChickenMaharani from '../../assets/Chicken-Maharani.jpg';
+import DhaniChicken from '../../assets/Dhani-Chicken.jpg';
+import ChickenEBukhara from '../../assets/Chicken-E-Bukhara.jpg';
+import SeafoodPasta from '../../assets/Seafood-Pasta.jpg';
+import ShrimpEBukhara from '../../assets/Shrimp-E-Bukhara.jpg';
+import AngelHairPasta from '../../assets/Angel-Hair-Pasta.jpg';
+import IranianKebab from '../../assets/Iranian-Kebab.jpg';
+import TandooriMixedCombo from '../../assets/Tandoori-Mixed-Combo.jpg';
+import ChickenTandoori from '../../assets/Chicken-Tandoori.jpg';
+import RackOfLamb from '../../assets/Rack-of-Lamb.jpg';
+import ChickenTikka from '../../assets/Chicken-Tikka.jpg';
+import LambBotiKebab from '../../assets/Lamb-Boti-Kebab.jpg';
+import TandooriPrawns from '../../assets/Tandoori-Prawns.jpg';
+import HalibutTandoori from '../../assets/Halibut-Tandoori.jpg';
+import TandooriMixedVegetables from '../../assets/Tandoori-Mixed-Vegetables.jpg';
+import ShabnamMasala from '../../assets/Shabnam-Masala.jpg';
+import NavarataoKorma from '../../assets/Navaratao-Korma.jpg';
+import SaagAalu from '../../assets/Saag-Aalu.jpg';
+import MatterPaneer from '../../assets/Matter-Paneer.jpg';
+import AaluMatter from '../../assets/Aalu-Matter.jpg';
+import MalaiKofta from '../../assets/Malai-Kofta.jpg';
+import ShahiVegetable from '../../assets/Shahi-Vegetable.jpg';
+import ShrimpVindaloo from '../../assets/Shrimp-Vindaloo.jpg';
+import HalibutMasala from '../../assets/Halibut-Masala.jpg';
+import CreamyCoconutCurryChicken from '../../assets/Creamy-Coconut-Curry-Chicken.jpg';
+import CreamyCoconutCurryLamb from '../../assets/Creamy-Coconut-Curry-Lamb.jpg';
+import LambShahiKorma from '../../assets/Lamb-Shahi-Korma.jpg';
+import CreamyCoconutCurryShrimp from '../../assets/Creamy-Coconut-Curry-Shrimp.jpg';
+import CreamyCoconutCurryFish from '../../assets/Creamy-Coconut-Curry-Fish.jpg';
+import SeafoodBiryani from '../../assets/Seafood-Biryani.jpg';
+import KashmiriPulao from '../../assets/Kashmiri-Pulao.jpg';
+import PotatoNaan from '../../assets/Potato-Naan.jpg';
+import PaneerNaan from '../../assets/Paneer-Naan.jpg';
+import KabuliNaan from '../../assets/Kabuli-Naan.jpg';
+import Roti from '../../assets/Roti.jpg';
+import Paratha from '../../assets/Paratha.jpg';
+import ChickenNaan from '../../assets/Chicken-Naan.jpg';
+import BroccoliParatha from '../../assets/Broccoli-Paratha.jpg';
+import SpicyCritinaSoup from '../../assets/Spicy-Critina-Soup.jpg';
+import Mulligatawny from '../../assets/Mulligatawny.jpg';
+import ShrimpSoup from '../../assets/Shrimp-Soup.jpg';
+import ColaDrinks from '../../assets/Cola-Drinks.jpg';
+import ColdTea from '../../assets/Cold-Tea.jpg';
 
 const MENU = [
 
@@ -74,7 +149,7 @@ const MENU = [
     desc: "Samosa chicken pakora. vegetable pakorn, veg. Samosa. onion bhaji.",
     price: 12.98,
     category: "Appetizers",
-    image: "",
+    image: MixedAppetizerForTwo,
   },
   {
     id: 6,
@@ -82,7 +157,7 @@ const MENU = [
     desc: "Onion rings in batter. deep fried and served with mint sauce.",
     price: 8.78,
     category: "Appetizers",
-    image: "",
+    image: OnionBhaji,
   },
   {
     id: 7,
@@ -90,7 +165,7 @@ const MENU = [
     desc: "Prawns sautéed and served with a cognac dressing dip ... Bukhara Style'.",
     price: 11.35,
     category: "Appetizers",
-    image: "",
+    image: ShrimpCocktail,
   },
   
 
@@ -111,7 +186,7 @@ const MENU = [
     desc: "Romaine and iceberg lettuce with a spiced Indian Dressing topped with pieces of Tandoori baked chicken.",
     price: 10.88,
     category: "Salads",
-    image: "",
+    image: BukharaSalad,
   },
   {
     id: 10,
@@ -119,7 +194,7 @@ const MENU = [
     desc: "Romaine and head lettuce with Jumbo Tandoori Prawns. Black Night Dressing and sea.me seeds.",
     price: 11.93,
     category: "Salads",
-    image: "",
+    image: PrawnSalad,
   },
 
   // =====================
@@ -131,7 +206,7 @@ const MENU = [
     desc: "Boneless lamb marinated in ginger, yogurt and butter, then cooked in Tandoor oven and simmered in special sauce.",
     price: 21.89,
     category: "Lamb-Special",
-    image: "",
+    image: ButterLamb,
   },
   {
     id: 14,
@@ -139,7 +214,7 @@ const MENU = [
     desc: "Boneless lamb cooked with spinach and Indian spices. A specialty from Goa. Lamb cooked with vinegar, spices and potatoes in spiced gravy.",
     price: 21.89,
     category: "Lamb-Special",
-    image: "",
+    image: LambSaag,
   },
   {
     id: 15,
@@ -147,7 +222,7 @@ const MENU = [
     desc: "Lamb cooked with fresh tomatoes. ground onions. ginger, garlic and Indian spices.",
     price: 21.89,
     category: "Lamb-Special",
-    image: "",
+    image: BukharaCurryLambRoghanJosh,
   },
   {
     id: 16,
@@ -155,7 +230,7 @@ const MENU = [
     desc: "Lamb pieces marinated with fish ground spices and sautéed with tomatoes, bell peppers and mushrooms.",
     price: 21.89,
     category: "Lamb-Special",
-    image: "",
+    image: LambJalrraizie,
   },
   {
     id: 17,
@@ -163,7 +238,7 @@ const MENU = [
     desc: "Boneless lamb marinated in ginger. yogurt and spices cooked in Tandoor oven, then simmered in sauce.",
     price: 21.89,
     category: "Lamb-Special",
-    image: "",
+    image: LambTikkaMasala,
   },
   {
     id: 18,
@@ -171,7 +246,7 @@ const MENU = [
     desc: "Boneless lamb marinated in ginger, yogurt and creamy coconut, then cooked in Tandoor oven and simmered in special sauce.",
     price: 21.89,
     category: "Lamb-Special",
-    image: "",
+    image: CreamyCoconutLambCurry,
   },
   {
     id: 19,
@@ -179,7 +254,7 @@ const MENU = [
     desc: "Lamb cooked in our special sauce with mushrooms and bell peppers",
     price: 21.89,
     category: "Lamb-Special",
-    image: "",
+    image: LambVindaloo,
   },
 
   // =====================
@@ -192,7 +267,7 @@ const MENU = [
     desc: "Lamb breast marinated in our special creamy sauce, ginger, garlic and special Indian spices (topped with egg).",
     price: 25.04,
     category: "Lamb",
-    image: "",
+    image: LambKashmiri,
   },
   {
     id: 21,
@@ -200,7 +275,7 @@ const MENU = [
     desc: "Lamb breast marinated in our special creamy sauce, ginger, garlic and special Indian spices (topped with egg).",
     price: 25.04,
     category: "Lamb",
-    image: "",
+    image: LambHaryalli,
   },
   {
     id: 22,
@@ -208,7 +283,7 @@ const MENU = [
     desc: "Saucy bite sized pieces of lamb, curried in golden brown onion, 'fresh tomatoes, slowly simmered in garlic, yogurt and whip cream sauce.",
     price: 25.04,
     category: "Lamb",
-    image: "",
+    image: DhaniLamb,
   },
   {
     id: 23,
@@ -216,7 +291,7 @@ const MENU = [
     desc: "Lamb breast marinated in our special tomato sauce. ginger, garlic, Julian onions. bell peppers and special Indian spices (topped with egg).",
     price: 25.04,
     category: "Lamb",
-    image: "",
+    image: LambTakatak,
   },
   {
     id: 24,
@@ -224,7 +299,7 @@ const MENU = [
     desc: "Lamb marinated in our special creamy sauce, ginger, garlic pineapple and special Indian spices (topped with an egg).",
     price: 25.04,
     category: "Lamb",
-    image: "",
+    image: LambShahjahani,
   },
   {
     id: 25,
@@ -232,7 +307,7 @@ const MENU = [
     desc: "Lamb marinated in our special tomato sauce. mushrooms and special Indian spices (topped with egg).",
     price: 25.04,
     category: "Lamb",
-    image: "",
+    image: LambMaharani,
   },
 
   // =====================
@@ -244,7 +319,7 @@ const MENU = [
     desc: "Boneless chicken marinated in ginger, yoghurt and spices. then cooked in Tandoor oven and simmered in sauce.",
     price: 23.99,
     category: "Chicken-Special",
-    image: "",
+    image: ChickenTikkaMasala,
   },
   {
     id: 27,
@@ -252,7 +327,7 @@ const MENU = [
     desc: "Boneless chicken marinated in ginger, yogurt and creamy coconut, then cooked in Tandoor oven and simmered in special sauce.",
     price: 23.99,
     category: "Chicken-Special",
-    image: "",
+    image: CreamyCoconutChickenCurry,
   },
   {
     id: 28,
@@ -260,7 +335,7 @@ const MENU = [
     desc: "Boneless chicken marinated in ginger. yogurt and spices, then cooked in the Tandoor oven and simmered in special sauce.",
     price: 23.99,
     category: "Chicken-Special",
-    image: "",
+    image: ButterChicken,
   },
   {
     id: 29,
@@ -268,7 +343,7 @@ const MENU = [
     desc: "Boneless chicken cooked with spinach and Indian spices.",
     price: 23.99,
     category: "Chicken-Special",
-    image: "",
+    image: ChickenSaag,
   },
   {
     id: 30,
@@ -276,7 +351,7 @@ const MENU = [
     desc: "A speciality from Goa. Chicken cooked with vinegar, spices and potatoes in spiced gravy.",
     price: 23.99,
     category: "Chicken-Special",
-    image: "",
+    image: ChickenVindaloo,
   },
   {
     id: 31,
@@ -284,7 +359,7 @@ const MENU = [
     desc: "Chicken pieces marinated with fresh ground spices and sn.uteed with tomatoes. bell peppers and mushrooms.",
     price: 23.99,
     category: "Chicken-Special",
-    image: "",
+    image: ChickenJalfraizie,
   },
   {
     id: 32,
@@ -292,7 +367,7 @@ const MENU = [
     desc: "Chicken breast, spinach leaves. sauce with cashew nuts. onions tomatoes and Indian spices",
     price: 23.99,
     category: "Chicken-Special",
-    image: "",
+    image: SpecialChickenMumtaz,
   },
   {
     id: 33,
@@ -300,7 +375,7 @@ const MENU = [
     desc: "Chicken cooked in our special sauce with mushrroms and bell peppers.",
     price: 23.99,
     category: "Chicken-Special",
-    image: "",
+    image: BukharaCurryChicken,
   },
   {
     id: 34,
@@ -308,7 +383,7 @@ const MENU = [
     desc: "Chicken cooked with fresh tomato. ground spices and sauteed with tomatoes. bell peppers and mushrooms.",
     price: 23.99,
     category: "Chicken-Special",
-    image: "",
+    image: ChickenRoghanJosh,
   },
 
   // =====================
@@ -320,7 +395,7 @@ const MENU = [
     desc: "Chicken breast marinated in our special creamy sauce. ginger,garlic and special Indian spices (topped with egg).",
     price: 23.99,
     category: "Chicken",
-    image: "",
+    image: ChickenKashmiri,
   },
   {
     id: 36,
@@ -328,7 +403,7 @@ const MENU = [
     desc: "Chicken breast marinated in our special green creamy sauce, ginger,garlic and special Indian spices (topped with egg).",
     price: 23.99,
     category: "Chicken",
-    image: "",
+    image: ChickenHaryalli,
   },
   {
     id: 37,
@@ -336,7 +411,7 @@ const MENU = [
     desc: "Chicken breast marinated in our special creamy sauce. ginger.garlicpine apple and special Indian spices (topped with egg).",
     price: 23.99,
     category: "Chicken",
-    image: "",
+    image: ChickenShahjahani,
   },
   {
     id: 38,
@@ -344,7 +419,7 @@ const MENU = [
     desc: "Chicken breast marinated in our special tomato sauce, ginger.garlic.Julian onions, bell peppers and special Indian spices (topped with egg).",
     price: 23.99,
     category: "Chicken",
-    image: "",
+    image: ChickenTakatak,
   },
   {
     id: 39,
@@ -352,7 +427,7 @@ const MENU = [
     desc: "Chicken breast marinated in our special tomato sauce, mushroomsand special Indian spices (topped with egg).",
     price: 23.99,
     category: "Chicken",
-    image: "",
+    image: ChickenMaharani,
   },
   {
     id: 40,
@@ -360,7 +435,7 @@ const MENU = [
     desc: "Saucy bite sized pieces of chicken. curried in golden brown onion. freshtomatoes, slowly simmered in garlic, yougurt. and whip cream sauce.",
     price: 23.99,
     category: "Chicken",
-    image: "",
+    image: DhaniChicken,
   },
 
   // =====================
@@ -372,7 +447,7 @@ const MENU = [
     desc: "Angel hair pasta with sauced chicken pieces in a light garlic cream sauce.",
     price: 19.54,
     category: "Pasta",
-    image: "",
+    image: ChickenEBukhara,
   },
   {
     id: 42,
@@ -380,7 +455,7 @@ const MENU = [
     desc: "Angel hair pasta and halibut in alight garlic cream sauce.",
     price: 20.59,
     category: "Pasta",
-    image: "",
+    image: SeafoodPasta,
   },
   {
     id: 43,
@@ -388,7 +463,7 @@ const MENU = [
     desc: "Angel hair pasta with sauced shrimp in a light garlic cream sauce.",
     price: 19.54,
     category: "Pasta",
-    image: "",
+    image: ShrimpEBukhara,
   },
   {
     id: 44,
@@ -396,7 +471,7 @@ const MENU = [
     desc: "Angel hair pasta with mixed vegetables in alight, curried, garlic cream sauce.",
     price: 18.49,
     category: "Pasta",
-    image: "",
+    image: AngelHairPasta,
   },
 
   // =====================
@@ -408,7 +483,7 @@ const MENU = [
     desc: "Chicken pieces marinated with yogurt and cashew nut paste.",
     price: 18.49,
     category: "Tandoori-Special",
-    image: "",
+    image: IranianKebab,
   },
   {
     id: 46,
@@ -416,7 +491,7 @@ const MENU = [
     desc: "A combination of chicken, lamb, fish, rack of lamb and prawns with our special sauces.",
     price: 18.49,
     category: "Tandoori-Special",
-    image: "",
+    image: TandooriMixedCombo,
   },
   {
     id: 47,
@@ -424,7 +499,7 @@ const MENU = [
     desc: "Half a spring chicken, roasted in the Tandoori oven.",
     price: 18.49,
     category: "Tandoori-Special",
-    image: "",
+    image: ChickenTandoori,
   },
   {
     id: 48,
@@ -432,7 +507,7 @@ const MENU = [
     desc: "Rack of lamb.served French Style.with our special sauce.",
     price: 18.49,
     category: "Tandoori-Special",
-    image: "",
+    image: RackOfLamb,
   },
   {
     id: 49,
@@ -440,7 +515,7 @@ const MENU = [
     desc: "Boneless chicken pieces marinated in our unique spicy yogurt sauce.",
     price: 18.49,
     category: "Tandoori-Special",
-    image: "",
+    image: ChickenTikka,
   },
   {
     id: 50,
@@ -448,7 +523,7 @@ const MENU = [
     desc: "Pieces of tender lamb leg meat with a spicy yogurt sauce.",
     price: 18.49,
     category: "Tandoori-Special",
-    image: "",
+    image: LambBotiKebab,
   },
   {
     id: 51,
@@ -456,7 +531,7 @@ const MENU = [
     desc: "Prawns marinated with herbs and spices and boiled in Tandoori oven.",
     price: 18.49,
     category: "Tandoori-Special",
-    image: "",
+    image: TandooriPrawns,
   },
   {
     id: 52,
@@ -464,7 +539,7 @@ const MENU = [
     desc: "Filet of halibut, marinated with spices and herbs.topped with a tropical fruit relish.",
     price: 18.49,
     category: "Tandoori-Special",
-    image: "",
+    image: HalibutTandoori,
   },
   {
     id: 53,
@@ -472,7 +547,7 @@ const MENU = [
     desc: "Cottage cheese. zucchini, mushroom, cauliflower.bell pepper, onion and potato.",
     price: 18.49,
     category: "Tandoori-Special",
-    image: "",
+    image: TandooriMixedVegetables,
   },
 
   // =====================
@@ -500,7 +575,7 @@ const MENU = [
     desc: "A perfect mix, of mushrooms and onions cooked with spices.",
     price: 18.49,
     category: "Vegetarian",
-    image: "",
+    image: ShabnamMasala,
   },
   {
     id: 57,
@@ -516,7 +591,7 @@ const MENU = [
     desc: "Nine kinds of mixed vegetables cooked with cheese and nuts in a mild cream sauce.",
     price: 18.49,
     category: "Vegetarian",
-    image: "",
+    image: NavarataoKorma,
   },
   {
     id: 59,
@@ -540,7 +615,7 @@ const MENU = [
     desc: "Spinach and potatoes cooked with garlic and ginger.",
     price: 18.49,
     category: "Vegetarian",
-    image: "",
+    image: SaagAalu,
   },
   {
     id: 62,
@@ -548,7 +623,7 @@ const MENU = [
     desc: "Homemade fresh cheese with green peas cooked with onions, tomatoes and spices.",
     price: 18.49,
     category: "Vegetarian",
-    image: "",
+    image: MatterPaneer,
   },
   {
     id: 63,
@@ -556,7 +631,7 @@ const MENU = [
     desc: "Potatoes and green peas in spiced gravy.",
     price: 18.49,
     category: "Vegetarian",
-    image: "",
+    image: AaluMatter,
   },
   {
     id: 64,
@@ -564,7 +639,7 @@ const MENU = [
     desc: "Minced paneer and potato balls stuffed with dried fruits in a mild cream sauce.",
     price: 18.49,
     category: "Vegetarian",
-    image: "",
+    image: MalaiKofta,
   },
   {
     id: 65,
@@ -580,7 +655,7 @@ const MENU = [
     desc: "Nine kinds of fresh vegetable cooked in spinach puree.",
     price: 18.49,
     category: "Vegetarian",
-    image: "",
+    image: ShahiVegetable,
   },
 
   // =====================
@@ -632,7 +707,7 @@ const MENU = [
     desc: "A specially from Goa. Jumbo Prawns cooked in vinegar, spices and potatoes in spiced gravy.",
     price: 20.59,
     category: "Seafood",
-    image: "",
+    image: ShrimpVindaloo,
   },
 
   // =====================
@@ -644,7 +719,7 @@ const MENU = [
     desc: "Salfron flavored rice with fresh vegetables, fried fruit; and nuts served with raita.",
     price: 20.59,
     category: "Specialty-Curries",
-    image: "",
+    image: HalibutMasala,
   },
   {
     id: 74,
@@ -652,7 +727,7 @@ const MENU = [
     desc: "Creamy coconut curry chicken.",
     price: 19.54,
     category: "Specialty-Curries",
-    image: "",
+    image: CreamyCoconutCurryChicken,
   },
   {
     id: 75,
@@ -660,7 +735,7 @@ const MENU = [
     desc: "Creamy Coconut Curry Lamb",
     price: 20.59,
     category: "Specialty-Curries",
-    image: "",
+    image: CreamyCoconutCurryLamb,
   },
   {
     id: 76,
@@ -668,7 +743,7 @@ const MENU = [
     desc: "Basmati rice cooked with fish. crab. shrimp p, scallops & fresh spices.",
     price: 20.59,
     category: "Specialty-Curries",
-    image: "",
+    image: LambShahiKorma,
   },
   {
     id: 77,
@@ -676,7 +751,7 @@ const MENU = [
     desc: "Creamy Coconut Curry Shrimp",
     price: 20.59,
     category: "Specialty-Curries",
-    image: "",
+    image: CreamyCoconutCurryShrimp,
   },
   {
     id: 78,
@@ -684,7 +759,7 @@ const MENU = [
     desc: "Creamy Coconut Curry Fish",
     price: 19.54,
     category: "Specialty-Curries",
-    image: "",
+    image: CreamyCoconutCurryFish,
   },
 
   // =====================
@@ -728,7 +803,7 @@ const MENU = [
     desc: "Basmati rice cooked with fish, crab, shrimp, scalllops & fish spices.",
     price: 23.74,
     category: "Rice",
-    image: "",
+    image: SeafoodBiryani,
   },
   {
     id: 84,
@@ -736,7 +811,7 @@ const MENU = [
     desc: "Salfron flavored rice with fresh vegetables, fried fruit; and nuts served with raita.",
     price: 18.49,
     category: "Rice",
-    image: "",
+    image: KashmiriPulao,
   },
 
   // =====================
@@ -772,7 +847,7 @@ const MENU = [
     desc: "Naan stuffed with spiced potatoes and peas.",
     price: 3.99,
     category: "Bread",
-    image: "",
+    image: PotatoNaan,
   },
   {
     id: 89,
@@ -780,7 +855,7 @@ const MENU = [
     desc: "Naan stuffed with homemade Indian cheese and spices.",
     price: 3.99,
     category: "Bread",
-    image: "",
+    image: PaneerNaan,
   },
   {
     id: 90,
@@ -788,7 +863,7 @@ const MENU = [
     desc: "Naan filled with almonds, cashews, pistachios and dried cherries.",
     price: 3.99,
     category: "Bread",
-    image: "",
+    image: KabuliNaan,
   },
   {
     id: 91,
@@ -796,7 +871,7 @@ const MENU = [
     desc: "Unleavened whole wheat bread.",
     price: 3.99,
     category: "Bread",
-    image: "",
+    image: Roti,
   },
   {
     id: 92,
@@ -804,7 +879,7 @@ const MENU = [
     desc: "Unleavened whole wheat bread in multiple layers.",
     price: 3.99,
     category: "Bread",
-    image: "",
+    image: Paratha,
   },
   {
     id: 93,
@@ -812,7 +887,7 @@ const MENU = [
     desc: "Naan stuffed with minced chicken.",
     price: 3.99,
     category: "Bread",
-    image: "",
+    image: ChickenNaan,
   },
   {
     id: 94,
@@ -820,7 +895,7 @@ const MENU = [
     desc: "Paratha stuffed with seasoned broccoli.",
     price: 3.99,
     category: "Bread",
-    image: "",
+    image: BroccoliParatha,
   },
   {
     id: 95,
@@ -848,7 +923,7 @@ const MENU = [
     desc: "Chicken, mixed vegetables, chil i, corn starch, tomatoes with our special Indian spices.",
     price: 9.83,
     category: "Soup",
-    image: "",
+    image: SpicyCritinaSoup,
   },
   {
     id: 98,
@@ -856,7 +931,7 @@ const MENU = [
     desc: "A classic Indian soup of apples and curry.",
     price: 9.83,
     category: "Soup",
-    image: "",
+    image: Mulligatawny,
   },
   {
     id: 99,
@@ -864,7 +939,7 @@ const MENU = [
     desc: "Shrimp and Spinach soup with celery. leeks and spices, the 'chefs favourite'.",
     price: 9.83,
     category: "Soup",
-    image: "",
+    image: ShrimpSoup,
   },
 
   // =====================
@@ -932,7 +1007,7 @@ const MENU = [
     desc: "Pepsi, Cokacola, etc.",
     price: 5.63,
     category: "Beverages-Drinks",
-    image: "",
+    image: ColaDrinks,
   },
   {
     id: 107,
@@ -940,7 +1015,7 @@ const MENU = [
     desc: "Milk dumplings soaked in rose syrup.",
     price: 6.15,
     category: "Beverages-Drinks",
-    image: "",
+    image: ColdTea,
   },
 
 ];
