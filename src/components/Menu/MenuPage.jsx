@@ -32,7 +32,7 @@ export default function MenuPage({
         (item) =>
           `• ${item.name} x${item.qty} = $${(item.price * item.qty).toFixed(2)}`
       )
-      .join("%0A");
+      .join("\n");
 
     const message = `
 🛍️ *New Order - Tikka Masala*
