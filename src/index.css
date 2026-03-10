@@ -375,3 +375,10 @@ body {
   height: 46px;
   font-size: 15px;
 }
+
+.site-footer-copy {
+  color: #f0d794;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-align: center;
+}

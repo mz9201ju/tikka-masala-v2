@@ -34,6 +34,9 @@ export default function Footer() {
                         <strong>WhatsApp:</strong> {PHONE_DISPLAY}
                     </a>
                 </p>
+                <div className="site-footer-copy">
+                    &copy; {new Date().getFullYear()} Tikka Masala Bellevue / BDTK LLC. All rights reserved.
+                </div>
             </div>
         </footer>
     );
