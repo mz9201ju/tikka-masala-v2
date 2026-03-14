@@ -35,7 +35,9 @@ export default function Footer() {
                     </a>
                 </p>
                 <div className="site-footer-copy">
-                    &copy; {new Date().getFullYear()} Tikka Masala Bellevue / BDTK LLC. All rights reserved.
+                    <a href="https://omerzahid.com" target="_blank" rel="noreferrer" className="footer-link">
+                        &copy; {new Date().getFullYear()} Tikka Masala Bellevue / BDTK LLC. All rights reserved.
+                    </a>
                 </div>
             </div>
         </footer>
