@@ -39,10 +39,10 @@ export default function MenuPage({
   }, [checkoutNotice]);
 
   useEffect(() => {
-    if (cart.length === 0 && draft.message) {
-      setDraft({ channel: null, message: "" });
+    if (cart.length === 0 && (draft.channel || draft.message)) {
+      Promise.resolve().then(() => setDraft({ channel: null, message: "" }));
     }
-  }, [cart.length, draft.message]);
+  }, [cart.length, draft.channel, draft.message]);
 
   const handleWhatsAppCheckout = async () => {
     if (cart.length === 0) return;
@@ -207,7 +207,7 @@ Please confirm this order. Thank you!
           />
         </div>
       )}
-      
+
       <div className="tm-menu-layout">
         {/* ================= MENU LIST ================= */}
         <div className="tm-menu-list">
@@ -363,8 +363,8 @@ Please confirm this order. Thank you!
                       {draft.channel === "instagram"
                         ? "Instagram Order Message"
                         : draft.channel === "facebook"
-                        ? "Facebook Messenger Order Message"
-                        : "Order Message"}
+                          ? "Facebook Messenger Order Message"
+                          : "Order Message"}
                     </p>
                     <textarea
                       className="tm-instagram-draft"
@@ -386,8 +386,8 @@ Please confirm this order. Thank you!
                         {draft.channel === "instagram"
                           ? "Open Instagram DM"
                           : draft.channel === "facebook"
-                          ? "Open Facebook Messenger"
-                          : "Open Chat"}
+                            ? "Open Facebook Messenger"
+                            : "Open Chat"}
                       </button>
                       <button
                         className="tm-btn tm-btn-sm"
