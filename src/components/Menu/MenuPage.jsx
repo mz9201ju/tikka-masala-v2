@@ -2,8 +2,8 @@ import { useRef, useState, useEffect } from "react";
 import { PHONE_NUMBER, DELIVERY_LINKS } from "../../constants";
 import "./MenuPage.css";
 
-const INSTAGRAM_DM_LINK = "https://www.instagram.com/direct/t/17844143036713567/";
-const FACEBOOK_DM_LINK = "https://www.facebook.com/messages/t/102212199029926";
+const INSTAGRAM_DM_LINK = "https://www.instagram.com/tikkamasalabellevue";
+const FACEBOOK_DM_LINK = "https://www.facebook.com/tikkamasalabellevue";
 
 export default function MenuPage({
   MENU,
