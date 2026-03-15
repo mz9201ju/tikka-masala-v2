@@ -2,6 +2,8 @@ import { useRef, useState, useEffect } from "react";
 import { PHONE_NUMBER, DELIVERY_LINKS } from "../../constants";
 import "./MenuPage.css";
 
+const INSTAGRAM_DM_LINK = "https://www.instagram.com/direct/t/17844143036713567/";
+
 export default function MenuPage({
   MENU,
   categories,
@@ -17,6 +19,8 @@ export default function MenuPage({
   const [openCategory, setOpenCategory] = useState(null);
   const [isMobile, setIsMobile] = useState(() => window.innerWidth < 980);
   const [modalImage, setModalImage] = useState(null);
+  const [checkoutNotice, setCheckoutNotice] = useState("");
+  const [instagramDraft, setInstagramDraft] = useState("");
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 980);
@@ -24,8 +28,15 @@ export default function MenuPage({
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const handleWhatsAppCheckout = () => {
+  useEffect(() => {
+    if (!checkoutNotice) return;
+    const timeout = setTimeout(() => setCheckoutNotice(""), 3000);
+    return () => clearTimeout(timeout);
+  }, [checkoutNotice]);
+
+  const handleWhatsAppCheckout = async () => {
     if (cart.length === 0) return;
+    setInstagramDraft("");
 
     const itemsText = cart
       .map(
@@ -47,10 +58,78 @@ ${itemsText}
 ✅ Please confirm this order. Thank you!
 `;
 
+    if (navigator.clipboard?.writeText) {
+      try {
+        await navigator.clipboard.writeText(message.trim());
+        setCheckoutNotice("Order copied. Opening WhatsApp chat...");
+      } catch {
+        setCheckoutNotice("Opening WhatsApp chat...");
+      }
+    } else {
+      setCheckoutNotice("Opening WhatsApp chat...");
+    }
+
     window.open(
       `https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(message)}`,
       "_blank"
     );
+  };
+
+  const handleInstagramCheckout = async () => {
+    if (cart.length === 0) return;
+
+    const itemsText = cart
+      .map(
+        (item) =>
+          `• ${item.name} x${item.qty} = $${(item.price * item.qty).toFixed(2)}`
+      )
+      .join("\n");
+
+    const message = `
+New Order - Tikka Masala
+
+${itemsText}
+
+---------------------
+Total: $${total.toFixed(2)}
+
+Pickup: 1624 145th PL SE, Bellevue, WA 98007
+
+Please confirm this order. Thank you!
+`;
+
+    const trimmedMessage = message.trim();
+    setInstagramDraft(trimmedMessage);
+
+    if (navigator.clipboard?.writeText) {
+      try {
+        await navigator.clipboard.writeText(trimmedMessage);
+        setCheckoutNotice("Order copied. Paste it in Instagram DM below.");
+      } catch {
+        setCheckoutNotice("Instagram cannot auto-fill text. Copy and paste the order below.");
+      }
+    } else {
+      setCheckoutNotice("Instagram cannot auto-fill text. Copy and paste the order below.");
+    }
+  };
+
+  const handleOpenInstagramDm = () => {
+    window.open(INSTAGRAM_DM_LINK, "_blank");
+  };
+
+  const handleCopyInstagramDraft = async () => {
+    if (!instagramDraft) return;
+    if (!navigator.clipboard?.writeText) {
+      setCheckoutNotice("Clipboard is unavailable. Please copy manually from the text box.");
+      return;
+    }
+
+    try {
+      await navigator.clipboard.writeText(instagramDraft);
+      setCheckoutNotice("Order copied. Paste it into Instagram DM.");
+    } catch {
+      setCheckoutNotice("Could not copy automatically. Please copy manually from the text box.");
+    }
   };
 
   const handleToggleCategory = (cat) => {
@@ -225,11 +304,50 @@ ${itemsText}
                 </button>
 
                 <button
+                  className="tm-btn tm-btn-primary tm-btn-full"
+                  onClick={handleInstagramCheckout}
+                >
+                  Message via Instagram
+                </button>
+
+                {instagramDraft && (
+                  <div className="tm-instagram-helper">
+                    <p className="tm-instagram-helper-title">Instagram Order Message</p>
+                    <textarea
+                      className="tm-instagram-draft"
+                      readOnly
+                      value={instagramDraft}
+                      rows={8}
+                    />
+                    <div className="tm-instagram-helper-actions">
+                      <button
+                        className="tm-btn tm-btn-sm"
+                        onClick={handleCopyInstagramDraft}
+                      >
+                        Copy Order
+                      </button>
+                      <button
+                        className="tm-btn tm-btn-sm"
+                        onClick={handleOpenInstagramDm}
+                      >
+                        Open Instagram DM
+                      </button>
+                    </div>
+                  </div>
+                )}
+
+                <button
                   className="tm-btn tm-btn-ghost tm-btn-full"
                   onClick={clearCart}
                 >
                   Clear Cart
                 </button>
+
+                {checkoutNotice && (
+                  <p className="tm-checkout-notice">
+                    {checkoutNotice}
+                  </p>
+                )}
 
                 {/* <div className="tm-cart-partners">
                   <div className="tm-delivery-buttons vertical">
