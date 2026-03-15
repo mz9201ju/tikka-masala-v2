@@ -3,6 +3,7 @@ import { PHONE_NUMBER, DELIVERY_LINKS } from "../../constants";
 import "./MenuPage.css";
 
 const INSTAGRAM_DM_LINK = "https://www.instagram.com/direct/t/17844143036713567/";
+const FACEBOOK_DM_LINK = "https://www.facebook.com/messages/t/102212199029926";
 
 export default function MenuPage({
   MENU,
@@ -20,7 +21,10 @@ export default function MenuPage({
   const [isMobile, setIsMobile] = useState(() => window.innerWidth < 980);
   const [modalImage, setModalImage] = useState(null);
   const [checkoutNotice, setCheckoutNotice] = useState("");
-  const [instagramDraft, setInstagramDraft] = useState("");
+  const [draft, setDraft] = useState({
+    channel: null, // 'instagram' | 'facebook'
+    message: ""
+  });
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 980);
@@ -34,9 +38,15 @@ export default function MenuPage({
     return () => clearTimeout(timeout);
   }, [checkoutNotice]);
 
+  useEffect(() => {
+    if (cart.length === 0 && draft.message) {
+      setDraft({ channel: null, message: "" });
+    }
+  }, [cart.length, draft.message]);
+
   const handleWhatsAppCheckout = async () => {
     if (cart.length === 0) return;
-    setInstagramDraft("");
+    setDraft({ channel: null, message: "" });
 
     const itemsText = cart
       .map(
@@ -75,7 +85,8 @@ ${itemsText}
     );
   };
 
-  const handleInstagramCheckout = async () => {
+  // Shared handler for Instagram and Facebook
+  const handleSocialCheckout = async (channel) => {
     if (cart.length === 0) return;
 
     const itemsText = cart
@@ -99,37 +110,67 @@ Please confirm this order. Thank you!
 `;
 
     const trimmedMessage = message.trim();
-    setInstagramDraft(trimmedMessage);
+    setDraft({ channel, message: trimmedMessage });
 
     if (navigator.clipboard?.writeText) {
       try {
         await navigator.clipboard.writeText(trimmedMessage);
-        setCheckoutNotice("Order copied. Paste it in Instagram DM below.");
+        setCheckoutNotice(
+          channel === "instagram"
+            ? "Order copied. Paste it in Instagram DM below."
+            : "Order copied. Paste it in Facebook Messenger below."
+        );
       } catch {
-        setCheckoutNotice("Instagram cannot auto-fill text. Copy and paste the order below.");
+        setCheckoutNotice(
+          channel === "instagram"
+            ? "Instagram cannot auto-fill text. Copy and paste the order below."
+            : "Facebook cannot auto-fill text. Copy and paste the order below."
+        );
       }
     } else {
-      setCheckoutNotice("Instagram cannot auto-fill text. Copy and paste the order below.");
+      setCheckoutNotice(
+        channel === "instagram"
+          ? "Instagram cannot auto-fill text. Copy and paste the order below."
+          : "Facebook cannot auto-fill text. Copy and paste the order below."
+      );
     }
   };
 
-  const handleOpenInstagramDm = () => {
-    window.open(INSTAGRAM_DM_LINK, "_blank");
+  const handleOpenSocialDm = () => {
+    if (draft.channel === "instagram") {
+      window.open(INSTAGRAM_DM_LINK, "_blank");
+    } else if (draft.channel === "facebook") {
+      window.open(FACEBOOK_DM_LINK, "_blank");
+    }
   };
 
-  const handleCopyInstagramDraft = async () => {
-    if (!instagramDraft) return;
+  const handleCopySocialDraft = async () => {
+    if (!draft.message) return;
     if (!navigator.clipboard?.writeText) {
       setCheckoutNotice("Clipboard is unavailable. Please copy manually from the text box.");
       return;
     }
-
     try {
-      await navigator.clipboard.writeText(instagramDraft);
-      setCheckoutNotice("Order copied. Paste it into Instagram DM.");
+      await navigator.clipboard.writeText(draft.message);
+      setCheckoutNotice(
+        draft.channel === "instagram"
+          ? "Order copied. Paste it into Instagram DM."
+          : "Order copied. Paste it into Facebook Messenger."
+      );
     } catch {
       setCheckoutNotice("Could not copy automatically. Please copy manually from the text box.");
     }
+  };
+
+  const handleCloseSocialDraft = () => {
+    setDraft({ channel: null, message: "" });
+    setCheckoutNotice("");
+  };
+
+  const handleClearCart = () => {
+    clearCart();
+    setDraft({ channel: null, message: "" });
+    setCheckoutNotice("");
   };
 
   const handleToggleCategory = (cat) => {
@@ -305,32 +346,54 @@ Please confirm this order. Thank you!
 
                 <button
                   className="tm-btn tm-btn-primary tm-btn-full"
-                  onClick={handleInstagramCheckout}
+                  onClick={() => handleSocialCheckout("instagram")}
                 >
                   Message via Instagram
                 </button>
+                <button
+                  className="tm-btn tm-btn-primary tm-btn-full"
+                  onClick={() => handleSocialCheckout("facebook")}
+                >
+                  Message via Facebook
+                </button>
 
-                {instagramDraft && (
+                {draft.message && (
                   <div className="tm-instagram-helper">
-                    <p className="tm-instagram-helper-title">Instagram Order Message</p>
+                    <p className="tm-instagram-helper-title">
+                      {draft.channel === "instagram"
+                        ? "Instagram Order Message"
+                        : draft.channel === "facebook"
+                        ? "Facebook Messenger Order Message"
+                        : "Order Message"}
+                    </p>
                     <textarea
                       className="tm-instagram-draft"
                       readOnly
-                      value={instagramDraft}
+                      value={draft.message}
                       rows={8}
                     />
                     <div className="tm-instagram-helper-actions">
                       <button
                         className="tm-btn tm-btn-sm"
-                        onClick={handleCopyInstagramDraft}
+                        onClick={handleCopySocialDraft}
                       >
                         Copy Order
                       </button>
                       <button
                         className="tm-btn tm-btn-sm"
-                        onClick={handleOpenInstagramDm}
+                        onClick={handleOpenSocialDm}
                       >
-                        Open Instagram DM
+                        {draft.channel === "instagram"
+                          ? "Open Instagram DM"
+                          : draft.channel === "facebook"
+                          ? "Open Facebook Messenger"
+                          : "Open Chat"}
+                      </button>
+                      <button
+                        className="tm-btn tm-btn-sm"
+                        onClick={handleCloseSocialDraft}
+                      >
+                        Close
                       </button>
                     </div>
                   </div>
@@ -338,7 +401,7 @@ Please confirm this order. Thank you!
 
                 <button
                   className="tm-btn tm-btn-ghost tm-btn-full"
-                  onClick={clearCart}
+                  onClick={handleClearCart}
                 >
                   Clear Cart
                 </button>
